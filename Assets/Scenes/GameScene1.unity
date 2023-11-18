@@ -2450,7 +2450,7 @@ GameObject:
   - component: {fileID: 459573543}
   - component: {fileID: 459573542}
   m_Layer: 5
-  m_Name: "\u8840 (1)"
+  m_Name: ScreenFilter_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3166,7 +3166,7 @@ GameObject:
   - component: {fileID: 628622424}
   - component: {fileID: 628622425}
   m_Layer: 0
-  m_Name: "\u53F3\u8FB9\u6444\u50CF\u673A"
+  m_Name: RightCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5575,7 +5575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1153077168}
   m_Layer: 0
-  m_Name: "\u4E8B\u4EF6\u5904\u7406\u5668"
+  m_Name: EventHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6438,7 +6438,7 @@ GameObject:
   - component: {fileID: 1275965607}
   - component: {fileID: 1275965608}
   m_Layer: 5
-  m_Name: OpenJianjie
+  m_Name: OpenDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6747,7 +6747,7 @@ GameObject:
   - component: {fileID: 1334123836}
   - component: {fileID: 1334123835}
   m_Layer: 5
-  m_Name: "\u8840 (2)"
+  m_Name: Blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8582,7 +8582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6620115889247198378, guid: 22fe73aecbd7ebc4fa0f2158efdc0895, type: 3}
       propertyPath: m_Name
-      value: "\u5DE6\u8FB9\u73A9\u5BB6"
+      value: LeftCharacter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8616,7 +8616,7 @@ GameObject:
   - component: {fileID: 1702854472}
   - component: {fileID: 1702854473}
   m_Layer: 0
-  m_Name: "\u5DE6\u8FB9\u6444\u50CF\u673A"
+  m_Name: LeftCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9417,7 +9417,7 @@ GameObject:
   - component: {fileID: 1850565407}
   - component: {fileID: 1850565408}
   m_Layer: 5
-  m_Name: "\u9ED1\u5C4F\u95F9\u949F"
+  m_Name: 6AMClock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9518,7 +9518,7 @@ GameObject:
   - component: {fileID: 1861121490}
   - component: {fileID: 1861121489}
   m_Layer: 5
-  m_Name: "\u83B7\u5F97\u63D0\u793A"
+  m_Name: ShowTip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10514,7 +10514,7 @@ GameObject:
   - component: {fileID: 2022198534}
   - component: {fileID: 2022198533}
   m_Layer: 5
-  m_Name: "\u8840"
+  m_Name: ScreenFilter_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11035,7 +11035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6620115889247198378, guid: 22fe73aecbd7ebc4fa0f2158efdc0895, type: 3}
       propertyPath: m_Name
-      value: "\u53F3\u8FB9\u73A9\u5BB6"
+      value: RightCharacter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

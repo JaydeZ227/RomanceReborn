@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 73
+  controlID: 120
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2260
+    width: 1776.6666
     height: 1299.3334
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
@@ -162,9 +162,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2260
+    x: 1776.6666
     y: 0
-    width: 100
+    width: 187.33337
     height: 1299.3334
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -188,9 +188,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2360
+    x: 1964
     y: 0
-    width: 100
+    width: 379.33325
     height: 1299.3334
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -214,9 +214,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2460
+    x: 2343.3333
     y: 0
-    width: 100
+    width: 216.66675
     height: 1299.3334
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
@@ -242,7 +242,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2260
+    width: 1776.6666
     height: 50
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -268,7 +268,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 50
-    width: 2260
+    width: 1776.6666
     height: 1249.3334
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -297,9 +297,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2260
+    x: 1776.6667
     y: 72.66667
-    width: 98
+    width: 185.33337
     height: 1278.3334
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -314,9 +314,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: bc670000
       m_LastClickedID: 0
-      m_ExpandedIDs: 16fbffff
+      m_ExpandedIDs: 0aecffff54ecffff16fbffff4c610000c8610000f26100001e6200006e620000b06200002e63000040630000e0630000f8630000026400000c6400003864000076640000c6640000886c00008e6c0000b66e00002a710000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -360,9 +360,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2460
+    x: 2343.3335
     y: 72.66667
-    width: 99
+    width: 215.66675
     height: 1278.3334
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -407,9 +407,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2360
+    x: 1964
     y: 72.66667
-    width: 98
+    width: 377.33325
     height: 1278.3334
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/SO/Level2
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\NYU\2023\Webtoon\RomanceReborn
+  m_LastProjectPath: E:\NYU\2023\Webtoon\RomanceReborn\RomanceReborn
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -532,7 +532,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 50
+  m_DirectoriesAreaWidth: 327.33325
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -555,7 +555,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 122.66667
-    width: 2259
+    width: 1775.6666
     height: 1228.3334
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -597,7 +597,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
+    m_HSlider: 1
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
@@ -609,23 +609,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 2259
+      width: 1775.6666
       height: 1207.3334
-    m_Scale: {x: 1.2656298, y: 1.2656298}
-    m_Translation: {x: 1129.5, y: 603.6667}
+    m_Scale: {x: 1.2656299, y: 1.2656298}
+    m_Translation: {x: 887.833, y: 603.6667}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -892.4411
+      x: -701.495
       y: -476.96942
-      width: 1784.8822
+      width: 1402.9905
       height: 953.93884
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 3388.5, y: 1842.5}
+  m_LastWindowPixelSize: {x: 2663.5, y: 1842.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -653,7 +653,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 2259
+    width: 1775.6666
     height: 29
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -670,7 +670,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -154.66663, y: -26.666687}
-      snapOffsetDelta: {x: -0.00012207031, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -929,7 +929,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 48, y: 48}
+      snapOffset: {x: 48, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
