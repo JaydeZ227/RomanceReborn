@@ -15,7 +15,7 @@ E:/NYU/2023/Webtoon/RomanceReborn/RomanceReborn
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60047
+64712
 Successfully changed project path to: E:/NYU/2023/Webtoon/RomanceReborn/RomanceReborn
 E:/NYU/2023/Webtoon/RomanceReborn/RomanceReborn
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ E:/NYU/2023/Webtoon/RomanceReborn/RomanceReborn
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20600] Host "[IP] 192.168.50.23 [Port] 0 [Flags] 2 [Guid] 1625606670 [EditorId] 1625606670 [Version] 1048832 [Id] WindowsEditor(7,JoJoZ_Alien) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [40148] Host "[IP] 192.168.50.23 [Port] 0 [Flags] 2 [Guid] 466070911 [EditorId] 466070911 [Version] 1048832 [Id] WindowsEditor(7,JoJoZ_Alien) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [20600] Host "[IP] 192.168.50.23 [Port] 0 [Flags] 2 [Guid] 1625606670 [EditorId] 1625606670 [Version] 1048832 [Id] WindowsEditor(7,JoJoZ_Alien) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [40148] Host "[IP] 192.168.50.23 [Port] 0 [Flags] 2 [Guid] 466070911 [EditorId] 466070911 [Version] 1048832 [Id] WindowsEditor(7,JoJoZ_Alien) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 31 workers.
-Refreshing native plugins compatible for Editor in 4.67 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 4.96 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.10f1 (ff3792e53c62)
 [Subsystems] Discovering subsystems at path E:/UnityPj/2022.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -70,7 +70,7 @@ Initialize mono
 Mono path[0] = 'E:/UnityPj/2022.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'E:/UnityPj/2022.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/UnityPj/2022.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56928
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56272
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/UnityPj/2022.3.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -81,8 +81,8 @@ Register platform support module: E:/UnityPj/2022.3.10f1/Editor/Data/PlaybackEng
 Register platform support module: E:/UnityPj/2022.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: E:/UnityPj/2022.3.10f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: E:/UnityPj/2022.3.10f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.005377 seconds.
-- Loaded All Assemblies, in  0.470 seconds
+Registered in 0.004723 seconds.
+- Loaded All Assemblies, in  0.245 seconds
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
@@ -93,40 +93,40 @@ Native extension for AppleTV target not found
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 233 ms
+Android Extension - Scanning For ADB Devices 744 ms
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.498 seconds
-Domain Reload Profiling: 968ms
-	BeginReloadAssembly (190ms)
+- Finished resetting the current domain, in  0.990 seconds
+Domain Reload Profiling: 1236ms
+	BeginReloadAssembly (80ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (39ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (191ms)
-		LoadAssemblies (199ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (103ms)
+		LoadAssemblies (81ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (180ms)
-			TypeCache.Refresh (179ms)
-				TypeCache.ScanAssembly (160ms)
+		AnalyzeDomain (100ms)
+			TypeCache.Refresh (99ms)
+				TypeCache.ScanAssembly (90ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (498ms)
+	FinalizeReload (991ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (464ms)
+		SetupLoadedEditorAssemblies (952ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (367ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (846ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (62ms)
-			ProcessInitializeOnLoadMethodAttributes (31ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (63ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -134,8 +134,8 @@ Domain Reload Profiling: 968ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.647 seconds
-Refreshing native plugins compatible for Editor in 1.43 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.435 seconds
+Refreshing native plugins compatible for Editor in 1.83 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
@@ -149,48 +149,78 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.413 seconds
-Domain Reload Profiling: 1061ms
-	BeginReloadAssembly (87ms)
+- Finished resetting the current domain, in  0.440 seconds
+Domain Reload Profiling: 875ms
+	BeginReloadAssembly (98ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (12ms)
+		CreateAndSetChildDomain (19ms)
 	RebuildCommonClasses (21ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (499ms)
-		LoadAssemblies (318ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (279ms)
+		LoadAssemblies (204ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (235ms)
-			TypeCache.Refresh (204ms)
-				TypeCache.ScanAssembly (175ms)
-			ScanForSourceGeneratedMonoScriptInfo (28ms)
+		AnalyzeDomain (130ms)
+			TypeCache.Refresh (113ms)
+				TypeCache.ScanAssembly (101ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (414ms)
+	FinalizeReload (441ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (309ms)
+		SetupLoadedEditorAssemblies (324ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (21ms)
+			InitializePlatformSupportModulesInManaged (25ms)
 			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (39ms)
-			ProcessInitializeOnLoadAttributes (223ms)
-			ProcessInitializeOnLoadMethodAttributes (22ms)
-			AfterProcessingInitializeOnLoad (1ms)
+			BeforeProcessingInitializeOnLoad (51ms)
+			ProcessInitializeOnLoadAttributes (204ms)
+			ProcessInitializeOnLoadMethodAttributes (40ms)
+			AfterProcessingInitializeOnLoad (2ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (4ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 4.64 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.16 seconds
+Refreshing native plugins compatible for Editor in 1.62 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4037 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 63 unused Assets / (60.8 KB). Loaded Objects now: 4503.
-Memory consumption went from 144.9 MB to 144.9 MB.
-Total: 8.268500 ms (FindLiveObjects: 0.260000 ms CreateObjectMapping: 0.116500 ms MarkObjects: 7.666400 ms  DeleteObjects: 0.223500 ms)
+Unloading 63 unused Assets / (60.9 KB). Loaded Objects now: 4503.
+Memory consumption went from 144.7 MB to 144.6 MB.
+Total: 2.531200 ms (FindLiveObjects: 0.174000 ms CreateObjectMapping: 0.086800 ms MarkObjects: 2.131400 ms  DeleteObjects: 0.133400 ms)
 
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 197423.564056 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_hairDown_uniform.png
+  artifactKey: Guid(49db848df46788848a2242fe41c6c697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_hairDown_uniform.png using Guid(49db848df46788848a2242fe41c6c697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06421438ffd7d710909c404b765a2d5f') in 0.124622 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.69 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (0.8 KB). Loaded Objects now: 4509.
+Memory consumption went from 79.2 MB to 79.2 MB.
+Total: 3.012100 ms (FindLiveObjects: 0.209600 ms CreateObjectMapping: 0.103900 ms MarkObjects: 2.680500 ms  DeleteObjects: 0.017300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
@@ -207,17 +237,225 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 16964.125747 seconds.
-  path: Assets/Prefabs/characters.prefab
-  artifactKey: Guid(22fe73aecbd7ebc4fa0f2158efdc0895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/characters.prefab using Guid(22fe73aecbd7ebc4fa0f2158efdc0895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3df265a926a5c5efcfe69f8116482d1b') in 0.180911 seconds
+  Time since last request: 22.716620 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_hairDown.png
+  artifactKey: Guid(b6b8d39748e94654481966ea960badea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_hairDown.png using Guid(b6b8d39748e94654481966ea960badea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f6b2fccb5d3c5a6bb54d48bc7200cb8') in 0.052300 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 144
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 6.355230 seconds.
-  path: Assets/Resources/BackgroundImage/phone
-  artifactKey: Guid(21e4340f73ac2ce4b932fba98b098177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/BackgroundImage/phone using Guid(21e4340f73ac2ce4b932fba98b098177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '388836aef49986fef4920e4050f5c7bc') in 0.000890 seconds
+  Time since last request: 10.553130 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_1.png
+  artifactKey: Guid(a526cb0cbf04b2142a0eb4a12050d921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_1.png using Guid(a526cb0cbf04b2142a0eb4a12050d921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c847b6f19ecc6edfee58715bccb3cce') in 0.033930 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 12.182830 seconds.
+  path: Assets/Resources/Character/Extra/unknown_1.png
+  artifactKey: Guid(2966f2ecad10d294582976bcb2296715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Extra/unknown_1.png using Guid(2966f2ecad10d294582976bcb2296715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79e48fa16b93d83ef976446df570c668') in 0.019525 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 6.335510 seconds.
+  path: Assets/Resources/Character/Jeha/Jeha_1.png
+  artifactKey: Guid(3d62ef8d70c3fcc499f51d016940592e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Jeha/Jeha_1.png using Guid(3d62ef8d70c3fcc499f51d016940592e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6edf5e768c0e23acd5cf426bf76f8bc') in 0.017900 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 34.866230 seconds.
+  path: Assets/Resources/Character/Chaerin/Ponytailuniform.png
+  artifactKey: Guid(15c033e563c5384498ee0b832072a6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Ponytailuniform.png using Guid(15c033e563c5384498ee0b832072a6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff4fad5e1cb288659a2a4e6e59ad5493') in 0.023398 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 3.528624 seconds.
+  path: Assets/Resources/Character/Chaerin/ChaerinCrazyStage3.png
+  artifactKey: Guid(d1025bee84ed71448905990958b6dd7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/ChaerinCrazyStage3.png using Guid(d1025bee84ed71448905990958b6dd7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49ce1ece57ece0ae5f36ea69fa45fb18') in 0.013050 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 9.331055 seconds.
+  path: Assets/Resources/Character
+  artifactKey: Guid(8cbb5eab60e90e846ad0639ec8de8448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character using Guid(8cbb5eab60e90e846ad0639ec8de8448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ada15e198ce71fad503c0f4915102b78') in 0.000699 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.885893 seconds.
+  path: Assets/Resources/Character/Mihui
+  artifactKey: Guid(e4599befc2853ad4ba2793632cd1e314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Mihui using Guid(e4599befc2853ad4ba2793632cd1e314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '115884264fd02512d9f08ff2a7893a18') in 0.000299 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.731551 seconds.
+  path: Assets/Resources/Character/Mihui/Mihui.png
+  artifactKey: Guid(a4fbcb16e35be03429b4d1b493e372ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Mihui/Mihui.png using Guid(a4fbcb16e35be03429b4d1b493e372ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab88909e32b504d5556fc11f9cbee26e') in 0.021957 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 11.682940 seconds.
+  path: Assets/Resources/Character/New Folder
+  artifactKey: Guid(1d3bb002852af2245b9a8e2faac7e046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/New Folder using Guid(1d3bb002852af2245b9a8e2faac7e046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e247c6c40652e403c6f568e4354f480') in 0.000459 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 10.608827 seconds.
+  path: Assets/Resources/Character/Rina
+  artifactKey: Guid(1d3bb002852af2245b9a8e2faac7e046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Rina using Guid(1d3bb002852af2245b9a8e2faac7e046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59fb0f69e9b1935e93dc5d34f0b80310') in 0.000404 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 42.912433 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_hairUp_uniform.png
+  artifactKey: Guid(15c033e563c5384498ee0b832072a6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_hairUp_uniform.png using Guid(15c033e563c5384498ee0b832072a6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3f2889a8a9fe4311878302bf4bf9f22') in 0.036770 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 20.771683 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_CrazyStage_3.png
+  artifactKey: Guid(d1025bee84ed71448905990958b6dd7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_CrazyStage_3.png using Guid(d1025bee84ed71448905990958b6dd7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef5c07bc75ad28a8ce17ee5b2b0be494') in 0.029924 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 76.787590 seconds.
+  path: Assets/Resources/Character/Mihui/Mihui_1.png
+  artifactKey: Guid(0d60413caabcf2348baa4be3f74be599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Mihui/Mihui_1.png using Guid(0d60413caabcf2348baa4be3f74be599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e126b7770ebdd975a37e4d3d0bb726b9') in 0.026124 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 86.292424 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_1 1.png
+  artifactKey: Guid(288744f896487b448825a684b38a0c23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_1 1.png using Guid(288744f896487b448825a684b38a0c23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '321f9d4a93d1c0199f848ff6bb8a22cc') in 0.025402 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 11.654057 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_1.png
+  artifactKey: Guid(288744f896487b448825a684b38a0c23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_1.png using Guid(288744f896487b448825a684b38a0c23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '744b823b4b2409081aa9fff5dc1c1381') in 0.023084 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 288.095620 seconds.
+  path: Assets/Resources/DialogueImage/dialogue button
+  artifactKey: Guid(9073d01f1e4bc9649854c5ddeb2f0229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/DialogueImage/dialogue button using Guid(9073d01f1e4bc9649854c5ddeb2f0229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38a6a30313bff32b3919c6a5444e1c3b') in 0.000719 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 8.363130 seconds.
+  path: Assets/Resources/DialogueImage/dialogueButton
+  artifactKey: Guid(9073d01f1e4bc9649854c5ddeb2f0229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/DialogueImage/dialogueButton using Guid(9073d01f1e4bc9649854c5ddeb2f0229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27e7f1d1b4acae0bb50d20dbc4df0e41') in 0.000448 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 21.690019 seconds.
+  path: Assets/Resources/BackgroundImage/screen
+  artifactKey: Guid(438755774bb710b47988f7d6f87179ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/BackgroundImage/screen using Guid(438755774bb710b47988f7d6f87179ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aebc857cc2e3ce9b887141614d5de3d') in 0.001271 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 123.665081 seconds.
+  path: Assets/Resources/BackgroundImage
+  artifactKey: Guid(7703b3ad9d4d59841bc091274ae7ea8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/BackgroundImage using Guid(7703b3ad9d4d59841bc091274ae7ea8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '980d57d1972bbbf494919c522efc3531') in 0.000978 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 9.960709 seconds.
+  path: Assets/Resources/BGImage
+  artifactKey: Guid(7703b3ad9d4d59841bc091274ae7ea8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/BGImage using Guid(7703b3ad9d4d59841bc091274ae7ea8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de57019e429e8e1dbc98526220af42e6') in 0.000336 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.783156 seconds.
+  path: Assets/Resources/UI/button
+  artifactKey: Guid(28372e3065c657b4ea4fddeab18b55dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/button using Guid(28372e3065c657b4ea4fddeab18b55dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46474f55f665e9f402519023e08c08e1') in 0.000586 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.142640 seconds.
+  path: Assets/Resources/UI/button/menu
+  artifactKey: Guid(e27403686113b51418621606171a02fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/button/menu using Guid(e27403686113b51418621606171a02fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeaa61e237f2ea9bc2ef7532777c8de8') in 0.001236 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.566436 seconds.
+  path: Assets/Resources/UI/button/menu/menu buttons
+  artifactKey: Guid(2a9e1f4ec07cd664785763ce82f8e392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/button/menu/menu buttons using Guid(2a9e1f4ec07cd664785763ce82f8e392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd32e4a1b2924267cbd022b2294ded16e') in 0.001337 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 34.095583 seconds.
+  path: Assets/Resources/UI
+  artifactKey: Guid(136652473f6c4684c92c32e27dff0b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI using Guid(136652473f6c4684c92c32e27dff0b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9e88d4325e43b1666c35f6ce5153fc0') in 0.000491 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 7.071384 seconds.
+  path: Assets/Resources/UI/Map
+  artifactKey: Guid(69b517b6412ca004fa190df614b29466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Map using Guid(69b517b6412ca004fa190df614b29466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1da1439e5b13ee669aea8945249d1537') in 0.000321 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.242784 seconds.
+  path: Assets/Resources/UI/Map/Chaerin icon.png
+  artifactKey: Guid(bfc36ac264601b84881a7a6e002de470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Map/Chaerin icon.png using Guid(bfc36ac264601b84881a7a6e002de470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '004616c2f2e92792430e6c01e8ea9730') in 0.019316 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 34.599044 seconds.
+  path: Assets/Resources/UI/Map/map_blood.png
+  artifactKey: Guid(8c889f3d8784b144d870fc77be1503b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/UI/Map/map_blood.png using Guid(8c889f3d8784b144d870fc77be1503b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6365203516ef82a1be9ea5e01863c489') in 0.020046 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3

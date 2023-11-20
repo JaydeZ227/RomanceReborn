@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 3256923160309306465}
   - component: {fileID: 695809231542657012}
   m_Layer: 6
-  m_Name: Jeha_1cun
+  m_Name: Jeha_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -606,107 +606,6 @@ MonoBehaviour:
   isCloseHide: 1
   showAlphaSpeed: 2
   hideAlphaSpeed: 2
---- !u!1 &2758608935121475044
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8052304990200890595}
-  - component: {fileID: 2795769390734732602}
-  - component: {fileID: 1147964938652628612}
-  m_Layer: 6
-  m_Name: Chaerin_wakeup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8052304990200890595
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2758608935121475044}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4709491374181293549}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2795769390734732602
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2758608935121475044}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 874b00e88b072fe44b5d5252b6010113, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &1147964938652628612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2758608935121475044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3c08f76409d75144a1cfba02d4a692d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isUseRealTime: 0
-  isCloseHide: 1
-  showAlphaSpeed: 2
-  hideAlphaSpeed: 2
 --- !u!1 &2806180733364209582
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +618,7 @@ GameObject:
   - component: {fileID: 3117212933396653844}
   - component: {fileID: 128055944253438116}
   m_Layer: 6
-  m_Name: unknown_1cun
+  m_Name: unknown_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -921,7 +820,7 @@ GameObject:
   - component: {fileID: 3873082727428988935}
   - component: {fileID: 4058732523067162285}
   m_Layer: 6
-  m_Name: Chaerin_1cun
+  m_Name: Chaerin_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -983,12 +882,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a526cb0cbf04b2142a0eb4a12050d921, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 288744f896487b448825a684b38a0c23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 15.5, y: 18.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1440,12 +1339,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6620115889247198378}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.19999695, y: -0.19999981, z: 330.8164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8052304990200890595}
   - {fileID: 4156136344285105437}
   - {fileID: 563910293273668690}
   - {fileID: 4721987098664557082}
@@ -1484,7 +1382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - stateName: player_up
-    stateShow: {fileID: 2758608935121475044}
+    stateShow: {fileID: 0}
   - stateName: player_big
     stateShow: {fileID: 5114572297109471489}
   - stateName: player_PiZhe
@@ -1513,7 +1411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - stateName: Chaerin_wakeup
-    stateShow: {fileID: 1147964938652628612}
+    stateShow: {fileID: 0}
   - stateName: Chaerin_1cun
     stateShow: {fileID: 4058732523067162285}
   - stateName: Chaerin_pizhe
