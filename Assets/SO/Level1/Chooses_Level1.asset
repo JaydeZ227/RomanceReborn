@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941fde7da68aca148bf1928b80e0ce12, type: 3}
+  m_Name: Chooses_Level1
+  m_EditorClassIdentifier: 
+  chooseMessages:
+  - chooseName: BedRoom_0
+    choose:
+      titleContent: 
+      chooseItem:
+      - name: 'Brush my hair and keep it down. '
+        chooseAction: 
+        chooseAction2: SetNextPlayerClothA
+        chooseEndLoadSay: BedRoom_1_0
+      - name: Pull hair into a ponytail.
+        chooseAction: SetA
+        chooseAction2: SetNextPlayerClothB
+        chooseEndLoadSay: BedRoom_1_1
+      endAction: 
+  - chooseName: BedRoom_1
+    choose:
+      titleContent: 
+      chooseItem:
+      - name: Stylized School Uniform
+        chooseAction: SetA
+        chooseAction2: 
+        chooseEndLoadSay: BedRoom_2_0
+      - name: Gym Clothes
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: BedRoom_2_1
+      endAction: 
+  - chooseName: Classroom_0
+    choose:
+      titleContent: 
+      chooseItem:
+      - name: Listen in to classmates
+        chooseAction: ChooseInScrool
+        chooseAction2: 
+        chooseEndLoadSay: 
+      - name: Scroll through phone
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: Classroom_1_1
+      - name: Read Romance story
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: Classroom_1_2
+      endAction: 

@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941fde7da68aca148bf1928b80e0ce12, type: 3}
+  m_Name: Chooses_Level2
+  m_EditorClassIdentifier: 
+  chooseMessages:
+  - chooseName: BedRoom0
+    choose:
+      titleContent: So what now?
+      chooseItem:
+      - name: Get Ready for School
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: 
+        chooseEndLoadChoose: BedRoom1
+        changeApathyCount: 0
+        addTimeCount: 0
+        changeTimeCount: 0
+      - name: Stay home
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: 3_2
+        chooseEndLoadChoose: 
+        changeApathyCount: 0
+        addTimeCount: 0
+        changeTimeCount: 0
+      endAction: 
+  - chooseName: BedRoom1
+    choose:
+      titleContent: 
+      chooseItem:
+      - name: Hair up
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: AddHair1
+        chooseEndLoadSay: Choose_BedRoom1
+        chooseEndLoadChoose: 
+        changeApathyCount: 0
+        addTimeCount: 0
+        changeTimeCount: 0
+      - name: Hair down
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: AddHair2
+        chooseEndLoadSay: Choose_BedRoom2
+        chooseEndLoadChoose: 
+        changeApathyCount: 1
+        addTimeCount: 0
+        changeTimeCount: 0
+      endAction: 
+  - chooseName: BedRoom2
+    choose:
+      titleContent: "\u201CThere\u2019s no time to waste, that girl is in my class
+        somewhere. I should get ready.\u201D"
+      chooseItem:
+      - name: School Uniform
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: AddCloth1
+        chooseEndLoadSay: Choose_BusStop0
+        chooseEndLoadChoose: 
+        changeApathyCount: 1
+        addTimeCount: 0
+        changeTimeCount: 0
+      - name: Gym Class Clothes
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: AddCloth2
+        chooseEndLoadSay: Choose_BusStop0
+        chooseEndLoadChoose: 
+        changeApathyCount: 0
+        addTimeCount: 0
+        changeTimeCount: 0
+      endAction: ChangeBedStopToChoose
+  - chooseName: BusStop0
+    choose:
+      titleContent: "\u201CWho cares what I wear anymore?\u201D "
+      chooseItem:
+      - name: Go on the bus
+        chooseUpdateProp: clue_note
+        chooseUpdateTip: clue_note
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: BusStop1
+        chooseEndLoadChoose: 
+        changeApathyCount: 0
+        addTimeCount: 1
+        changeTimeCount: 0
+      - name: Walk to school and See Jeha
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: SchoolGate0
+        chooseEndLoadChoose: 
+        changeApathyCount: 0
+        addTimeCount: 1
+        changeTimeCount: 0
+      endAction: 
+  - chooseName: NurseOffice0
+    choose:
+      titleContent: 'Chaerin goes to leave but the door is locked
+
+        Door lock
+        sound.'
+      chooseItem:
+      - name: Ask the students to let her out
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: NurseOffice1_1_0
+        chooseEndLoadChoose: 
+        changeApathyCount: 0
+        addTimeCount: 0
+        changeTimeCount: 0
+      - name: Yell at them
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: NurseOffice1_2_0
+        chooseEndLoadChoose: 
+        changeApathyCount: 0
+        addTimeCount: 0
+        changeTimeCount: 0
+      - name: Say nothing
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: (Apathy +2)
+        chooseAction2: 
+        chooseEndLoadSay: NurseOffice1_3_0
+        chooseEndLoadChoose: 
+        changeApathyCount: 2
+        addTimeCount: 0
+        changeTimeCount: 0
+      endAction: 
+  - chooseName: Gym1_1
+    choose:
+      titleContent: 'Should I look around or maybe talk to people for information? '
+      chooseItem:
+      - name: Investigate
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: 
+        chooseEndLoadChoose: 
+        changeApathyCount: 0
+        addTimeCount: 0
+        changeTimeCount: 0
+      - name: Talk to classmates
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseAction: 
+        chooseAction2: 
+        chooseEndLoadSay: 
+        chooseEndLoadChoose: 
+        changeApathyCount: 0
+        addTimeCount: 0
+        changeTimeCount: 0
+      endAction: 
