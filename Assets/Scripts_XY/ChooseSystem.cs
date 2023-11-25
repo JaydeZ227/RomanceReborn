@@ -8,17 +8,21 @@ public class ChooseSystem : MonoBehaviour
 {
     public Text titleText;
     public ChooseButton[] buttons;
-    
+
+    EventHandlerToGameController eventHandler;
     private void Awake()
     {
+        eventHandler = GameObject.FindGameObjectWithTag("EventHandle").GetComponent<EventHandlerToGameController>();
         for (int i = 0; i < buttons.Length; i++)
         {
             int j = i;
             buttons[j].clickAction += () =>
             {
+              
                 gameObject.SetActive(false);
                 if (SceneManager.GetActiveScene().name == "GameScene1")
                 {
+                    /*
                     if (chooseItems[j].chooseAction != "")
                     {
                         GameController.Instance.SendMessage(chooseItems[j].chooseAction);
@@ -37,9 +41,11 @@ public class ChooseSystem : MonoBehaviour
                     {
                         SetChoose(GameController.Instance.chooseSO.GetChoose(chooseItems[j].chooseEndLoadChoose).choose);
                     }
+                    */
                 }
                 else if (SceneManager.GetActiveScene().name == "GameScene2")
                 {
+                    /*
                     if (chooseItems[j].changeApathyCount != 0)
                     {
                         GameController2.Instance.ChangeApathyNum(chooseItems[j].changeApathyCount);
@@ -64,14 +70,19 @@ public class ChooseSystem : MonoBehaviour
                     if (chooseItems[j].chooseEndLoadSay != "")
                     {
 
-                        PlotController.Instance.SetSay(GameController2.Instance.plotSO.GetPlot(chooseItems[j].chooseEndLoadSay).plots);
+                        PlotController.Instance.SetSay(GameController2.Instance.PlotSO.GetPlot(chooseItems[j].chooseEndLoadSay).plots);
 
                     }
                     if (chooseItems[j].chooseEndLoadChoose != "")
                     {
-                        SetChoose(GameController2.Instance.chooseSO.GetChoose(chooseItems[j].chooseEndLoadChoose).choose);
+                        SetChoose(GameController2.Instance.ChooseSO.GetChoose(chooseItems[j].chooseEndLoadChoose).choose);
                     }
+                    */
                 
+                }
+                foreach (var item in chooseItems[j].chooseTargetEvent)
+                {
+                    eventHandler.SendMassageToGameController(item);
                 }
 
                 endAction?.Invoke();
@@ -88,6 +99,7 @@ public class ChooseSystem : MonoBehaviour
         }
         else
         {
+            /*
             if (SceneManager.GetActiveScene().name == "GameScene1")
             {
                 endAction = ()=> { GameController.Instance.SendMessage(chooseGame.endAction); };
@@ -96,10 +108,13 @@ public class ChooseSystem : MonoBehaviour
             {
                 endAction = () => { GameController2.Instance.SendMessage(chooseGame.endAction); };
             }
+            */
                 
         }
+
+        
         gameObject.SetActive(true);
-        titleText.text = chooseGame.titleContent;
+        //titleText.text = chooseGame.titleContent;
         this.chooseItems = chooseGame.chooseItem;
         for (int i = 0; i < buttons.Length; i++)
         {
@@ -118,8 +133,8 @@ public class ChooseSystem : MonoBehaviour
 [System.Serializable]
 public class ChooseGame
 {
-    [TextArea(4,8)]
-    public string titleContent;
+  //  [TextArea(4,8)]
+    //public string titleContent;
   
     public ChooseItem[] chooseItem;
     public string endAction;
@@ -131,12 +146,13 @@ public class ChooseItem
     public string name;
     public string chooseUpdateProp;
     public string chooseUpdateTip;
-    public string chooseAction;
-    public string chooseAction2;
-    
-    public string chooseEndLoadSay;
-    public string chooseEndLoadChoose;
-    public int changeApathyCount = 0;
-    public int addTimeCount = 0;
-    public float changeTimeCount = 0;
+    //   public string chooseAction;
+    //  public string chooseAction2;
+
+    //  public string chooseEndLoadSay;
+    // public string chooseEndLoadChoose;
+    // public int changeApathyCount = 0;
+    // public int addTimeCount = 0;
+    // public float changeTimeCount = 0;
+    public MethodEvent[] chooseTargetEvent;
 }

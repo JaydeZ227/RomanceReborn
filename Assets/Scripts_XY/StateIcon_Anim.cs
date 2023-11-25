@@ -54,7 +54,7 @@ public class StateIcon_Anim : MonoBehaviour
     public void SetState(string stateName)
     {
         Init();
-        //Debug.Log(stateName+"");
+        Debug.Log(stateName+"");
         if (stateName==lastState)
         {
             return;

@@ -40,10 +40,12 @@ public class PhonePage : MonoBehaviour
                 var icon = charactorLockParent.GetChild(i).GetComponent<CharactorIcon>();
                 if (GameController.Instance.charactorNameList.Contains(icon.charactorName))
                 {
+                    icon.gameObject.SetActive(true);
                     icon.SetLock(false);
                 }
                 else
                 {
+                    icon.gameObject.SetActive(false);
                     icon.SetLock(true);
                 }
             }
@@ -55,10 +57,13 @@ public class PhonePage : MonoBehaviour
                 var icon = charactorLockParent.GetChild(i).GetComponent<CharactorIcon>();
                 if (GameController2.Instance.charactorNameList.Contains(icon.charactorName))
                 {
+                    icon.gameObject.SetActive(true);
                     icon.SetLock(false);
                 }
                 else
                 {
+                    icon.gameObject.SetActive(false);
+                  
                     icon.SetLock(true);
                 }
             }
@@ -69,8 +74,11 @@ public class PhonePage : MonoBehaviour
     {
         isOpen = false;
         gameObject.SetActive(false);
-       
+        bagButton.SetActive(true);
+        iphoneButton.SetActive(true);
     }
+    public GameObject bagButton;
+    public GameObject iphoneButton;
     // Start is called before the first frame update
     void Start()
     {

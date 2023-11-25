@@ -13,8 +13,23 @@ public class StateIcon : MonoBehaviour
     [SerializeField]
     StateConfig[] states;
     string lastState;
+    public bool isNoRepeat = false;
+    
     public void SetState(string stateName)
     {
+        if (isNoRepeat && stateName!="")
+        {
+            /*
+            if (LocalData.repeatTipStrList.Contains(stateName))
+            {
+                return;
+            }
+            else
+            {
+                LocalData.repeatTipStrList.Add(stateName);
+            }
+          */
+        }
         //Debug.Log(stateName+"");
         if (stateName==lastState)
         {

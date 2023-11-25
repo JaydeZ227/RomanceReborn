@@ -7,13 +7,27 @@ public class LoadMapButton : MonoBehaviour
 {
     public string mapName="";
     Button btn;
+    public GameObject lockShow;
+    Transform playerIcon;
+    
+    public void SetLock(bool isLock)
+    {
+        lockShow.SetActive(isLock);
+        GetComponent<Button>().interactable = !isLock;
+    }
     private void Awake()
     {
+        playerIcon = GetComponentInParent<MapPage>().playerIcon;
         btn = GetComponent<Button>();
         btn.onClick.AddListener(()=> 
         {
-            GameController2.Instance.LoadSceneByMap(mapName);
-            GetComponentInParent<PhonePage>().CloseOrOpenThis();
+            playerIcon.GetComponent<PlayerIcon>().SetMoveTo(transform.position,()=> 
+            {
+                GameController2.Instance.LoadSceneByMap(mapName);
+                GetComponentInParent<PhonePage>().CloseOrOpenThis();
+                
+            });
+          
         });
     }
     // Start is called before the first frame update

@@ -7,6 +7,7 @@ public class CharactorIcon : MonoBehaviour
     public string charactorName = "";
     public GameObject lockImage, noLockImage;
      CanvasGroup canvasGroup;
+
     public void SetLock(bool isLock)
     {
         canvasGroup = GetComponent<CanvasGroup>();

@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
         
    
     }
-    public StateIcon_Anim leftPlayer, rightPlayer;
+    public StateIcon_Anim leftPlayer, middlePlayer,rightPlayer;
     static GameController _instance;
     public static GameController Instance {
         get
@@ -125,6 +125,8 @@ public class GameController : MonoBehaviour
     }
     IEnumerator loadNextSceneIE()
     {
+        //LocalData.levelBagStr =new List<string>( bagItemNameList.ToArray());
+        //LocalData.levelCharactorStr = new List<string>(charactorNameList.ToArray());
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("GameScene2");
     }
@@ -161,6 +163,9 @@ public class GameController : MonoBehaviour
     }
     public void BackMenu()
     {
+        //LocalData.repeatTipStrList = new List<string>();
+        //LocalData.levelBagStr = new List<string>();
+        //LocalData.levelCharactorStr = new List<string>();
         SceneManager.LoadScene("StartScene");
     }
 
@@ -171,6 +176,8 @@ public class GameController : MonoBehaviour
     #endregion
     #region ExitBed
     public string plotName_ExitBed = "BedRoom_1";
+    /*
+  
 
     [HideInInspector]
     public string same_player_cloth = "Chaerin_wakeup";
@@ -178,7 +185,7 @@ public class GameController : MonoBehaviour
     public string nextPlayerClothB = "";
 
     
-
+    
     public void SetNextPlayerClothA()
     {
         same_player_cloth = nextPlayerClothA;
@@ -187,6 +194,7 @@ public class GameController : MonoBehaviour
     {
         same_player_cloth = nextPlayerClothB;
     }
+    */
     #endregion
     #region InGame
     public string gameBG = "";
@@ -209,31 +217,70 @@ public class GameController : MonoBehaviour
     #region InSchool
     public string enterScroolSay;
 
-  
-    public string chooseAEnterSay = "Classroom_1_0";
-    public string chooseBEnterSay = "Classroom_1_0_1";
-    public void SetA()
+    [Header("玩家的服饰")]
+    string samePlayerStr = "Chaerin";
+    public string basePlayerStr = "same_player";
+    public string HairAddStr_Up = "hairUp";
+    public string HairAddStr_Down = "hairDown";
+    public string clothAddStr_uniform = "uniform";
+    public string clothAddStr_gym = "gym";
+    public string GetPlayerFuShi()
     {
-        isA = true;
+        Debug.Log("当前发型"+samePlayerStr);
+        return samePlayerStr;
+    }
+    public void AddHair_Up()
+    {
+        samePlayerStr += "_" + HairAddStr_Up;
+    }
+    public void AddHair_Down()
+    {
+        samePlayerStr += "_" + HairAddStr_Down;
+    }
+    public void AddCloth_uniform()
+    {
+        samePlayerStr += "_" + clothAddStr_uniform;
+    }
+    public void AddCloth_gym()
+    {
+        samePlayerStr += "_" + clothAddStr_gym;
+    }
+
+
+    public string chooseEnterSayByGymOrMaWei = "Classroom_1_0";
+    public string chooseEnterSayByNoGymOrMaWei = "Classroom_1_0_1";
+    public void SetMaWeiOrGym()
+    {
+        isMaWeiOrGym = true;
     }
   
-    bool isA = false;
+    bool isMaWeiOrGym = false;
     public void ChooseInScrool()
     {
-        if (isA)
+        if (isMaWeiOrGym)
         {
-            PlotController.Instance.SetSay(plotSO.GetPlot(chooseAEnterSay).plots);
+            PlotController.Instance.SetSay(plotSO.GetPlot(chooseEnterSayByGymOrMaWei).plots);
         }
         else
         {
-            PlotController.Instance.SetSay(plotSO.GetPlot(chooseBEnterSay).plots);
+            PlotController.Instance.SetSay(plotSO.GetPlot(chooseEnterSayByNoGymOrMaWei).plots);
         }
     }
     #endregion
+    public GameObject Iphone1;
+    public GameObject Bag1;
+    public void TakeProp()
+    {
+        Iphone1.SetActive(true);
+        Bag1.SetActive(true);
+    }
+
+
     private void Start()
     {
         GameState = GameStateEnum.Black;
         leftPlayer.SetState("");
+        middlePlayer.SetState("");
         rightPlayer.SetState("");
     }
     private void Update()
@@ -266,5 +313,7 @@ public class GameController : MonoBehaviour
                 break;
         }
     }
+
+    //
 
 }

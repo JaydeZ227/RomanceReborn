@@ -1229,7 +1229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4156136344285105437
 Transform:
   m_ObjectHideFlags: 0
@@ -1240,7 +1240,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3, y: 1, z: 0}
-  m_LocalScale: {x: 1.5292, y: 1.5292, z: 1.5292}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4709491374181293549}
@@ -1827,7 +1827,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4709491374181293549}
-  - component: {fileID: 5668525171443694127}
   - component: {fileID: 3386745564955289595}
   m_Layer: 6
   m_Name: characters
@@ -1878,35 +1877,6 @@ Transform:
   - {fileID: 536946212810443585}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5668525171443694127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6620115889247198378}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8f3981d7ff97404ab89802cb779da66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  states:
-  - stateName: player_up
-    stateShow: {fileID: 0}
-  - stateName: player_big
-    stateShow: {fileID: 5114572297109471489}
-  - stateName: player_PiZhe
-    stateShow: {fileID: 772635030978658211}
-  - stateName: player_MaWei
-    stateShow: {fileID: 968422089528849276}
-  - stateName: nan_normal
-    stateShow: {fileID: 6502224006001869385}
-  - stateName: nan_transition
-    stateShow: {fileID: 6464599609379089769}
-  - stateName: nan_zombie
-    stateShow: {fileID: 5861922781422272668}
-  - stateName: nan_big
-    stateShow: {fileID: 1726992414253433020}
 --- !u!114 &3386745564955289595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1921,7 +1891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - stateName: Chaerin_wakeup
-    stateShow: {fileID: 0}
+    stateShow: {fileID: 4579233388358660066}
   - stateName: Chaerin_1cun
     stateShow: {fileID: 4058732523067162285}
   - stateName: Chaerin_pizhe

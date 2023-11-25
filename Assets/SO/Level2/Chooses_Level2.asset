@@ -15,165 +15,367 @@ MonoBehaviour:
   chooseMessages:
   - chooseName: BedRoom0
     choose:
-      titleContent: So what now?
       chooseItem:
       - name: Get Ready for School
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: 
-        chooseEndLoadChoose: BedRoom1
-        changeApathyCount: 0
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: Choose_BedRoom1
+          parameterType: 2
       - name: Stay home
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: 3_2
-        chooseEndLoadChoose: 
-        changeApathyCount: 0
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: 3_1
+          parameterType: 2
       endAction: 
   - chooseName: BedRoom1
     choose:
-      titleContent: 
       chooseItem:
       - name: Hair up
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: AddHair1
-        chooseEndLoadSay: Choose_BedRoom1
-        chooseEndLoadChoose: 
-        changeApathyCount: 0
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: AddHair_Up
+          parameter: 
+          parameterType: 0
+        - methodName: LoadNextSay
+          parameter: Choose_BedRoom2
+          parameterType: 2
       - name: Hair down
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: AddHair2
-        chooseEndLoadSay: Choose_BedRoom2
-        chooseEndLoadChoose: 
-        changeApathyCount: 1
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: AddHair_Down
+          parameter: 
+          parameterType: 0
+        - methodName: ChangeApathyNum
+          parameter: 1
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Choose_BedRoom2
+          parameterType: 2
       endAction: 
   - chooseName: BedRoom2
     choose:
-      titleContent: "\u201CThere\u2019s no time to waste, that girl is in my class
-        somewhere. I should get ready.\u201D"
       chooseItem:
       - name: School Uniform
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: AddCloth1
-        chooseEndLoadSay: Choose_BusStop0
-        chooseEndLoadChoose: 
-        changeApathyCount: 1
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: AddCloth_uniform
+          parameter: 
+          parameterType: 0
+        - methodName: ChangeApathyNum
+          parameter: 2
+          parameterType: 1
+        - methodName: ChangeBedStopToChoose
+          parameter: 2
+          parameterType: 1
       - name: Gym Class Clothes
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: AddCloth2
-        chooseEndLoadSay: Choose_BusStop0
-        chooseEndLoadChoose: 
-        changeApathyCount: 0
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: AddCloth_gym
+          parameter: 
+          parameterType: 0
+        - methodName: ChangeBedStopToChoose
+          parameter: 2
+          parameterType: 1
       endAction: ChangeBedStopToChoose
   - chooseName: BusStop0
     choose:
-      titleContent: "\u201CWho cares what I wear anymore?\u201D "
       chooseItem:
       - name: Go on the bus
         chooseUpdateProp: clue_note
         chooseUpdateTip: clue_note
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: BusStop1
-        chooseEndLoadChoose: 
-        changeApathyCount: 0
-        addTimeCount: 1
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: SetTime
+          parameter: 24300
+          parameterType: 1
+        - methodName: ShowBSZombie
+          parameter: 
+          parameterType: 0
       - name: Walk to school and See Jeha
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: SchoolGate0
-        chooseEndLoadChoose: 
-        changeApathyCount: 0
-        addTimeCount: 1
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: SchoolGate0
+          parameterType: 2
       endAction: 
   - chooseName: NurseOffice0
     choose:
-      titleContent: 'Chaerin goes to leave but the door is locked
-
-        Door lock
-        sound.'
       chooseItem:
       - name: Ask the students to let her out
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: NurseOffice1_1_0
-        chooseEndLoadChoose: 
-        changeApathyCount: 0
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: AddTime
+          parameter: 1800
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: NurseOffice1_1_0
+          parameterType: 2
       - name: Yell at them
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: NurseOffice1_2_0
-        chooseEndLoadChoose: 
-        changeApathyCount: 0
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: AddTime
+          parameter: 1800
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: NurseOffice1_2_0
+          parameterType: 2
       - name: Say nothing
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: (Apathy +2)
-        chooseAction2: 
-        chooseEndLoadSay: NurseOffice1_3_0
-        chooseEndLoadChoose: 
-        changeApathyCount: 2
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: SetTime
+          parameter: 86400
+          parameterType: 1
+        - methodName: ChangeApathyNum
+          parameter: 2
+          parameterType: 2
+        - methodName: LoadNextSay
+          parameter: NurseOffice1_3_0
+          parameterType: 2
       endAction: 
   - chooseName: Gym1_1
     choose:
-      titleContent: 'Should I look around or maybe talk to people for information? '
       chooseItem:
       - name: Investigate
-        chooseUpdateProp: 
-        chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: 
-        chooseEndLoadChoose: 
-        changeApathyCount: 0
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseUpdateProp: bat
+        chooseUpdateTip: bat
+        chooseTargetEvent:
+        - methodName: AddTime
+          parameter: 1
+          parameterType: 0
+        - methodName: SetTip
+          parameter: bat
+          parameterType: 2
+        - methodName: SetPropToBag
+          parameter: bat
+          parameterType: 2
       - name: Talk to classmates
         chooseUpdateProp: 
         chooseUpdateTip: 
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: 
-        chooseEndLoadChoose: 
-        changeApathyCount: 0
-        addTimeCount: 0
-        changeTimeCount: 0
+        chooseTargetEvent:
+        - methodName: AddTime
+          parameter: 1
+          parameterType: 0
+        - methodName: LoadNextSay
+          parameter: Gmy2_1
+          parameterType: 2
+      endAction: 
+  - chooseName: Library0
+    choose:
+      chooseItem:
+      - name: "Ask if she\u2019s okay (Apathy -1)"
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: ChangeApathyNum
+          parameter: -1
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Library1_0
+          parameterType: 2
+      - name: Ask about her bracelet (Apathy +1)
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: ChangeApathyNum
+          parameter: 1
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Library1_1
+          parameterType: 2
+      - name: Ask about the zombies
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: Library1_2
+          parameterType: 2
+      endAction: 
+  - chooseName: Library1_State1
+    choose:
+      chooseItem:
+      - name: Send Rina to clear the zombies (Apathy +2)
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: ChangeApathyNum
+          parameter: 2
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Library2_0_0
+          parameterType: 2
+      endAction: 
+  - chooseName: Library1_State2
+    choose:
+      chooseItem:
+      - name: Send Rina to clear the zombies (Apathy +2)
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: ChangeApathyNum
+          parameter: 2
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Library2_0_0
+          parameterType: 2
+      - name: 'Use the rubber chicken '
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: Library2_1
+          parameterType: 2
+      endAction: 
+  - chooseName: Shop2ndFloor0
+    choose:
+      chooseItem:
+      - name: 'I came to save you. '
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: Shop2ndFloor1
+          parameterType: 2
+      - name: 'I had to find you. '
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: Shop2ndFloor1
+          parameterType: 2
+      - name: Tell her about the bracelet.
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: Shop2ndFloor1
+          parameterType: 2
+      endAction: 
+  - chooseName: ClassChoose0_State1
+    choose:
+      chooseItem:
+      - name: Ask about classmate with a bracelet
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: AddTime
+          parameter: 6
+          parameterType: 1
+        - methodName: ChangeApathyNum
+          parameter: -1
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Classroom2_0
+          parameterType: 2
+      - name: Listen In
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: AddTime
+          parameter: 6
+          parameterType: 1
+        - methodName: ChangeApathyNum
+          parameter: 2
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Classroom2_1
+          parameterType: 2
+      - name: Investigate Classroom
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: AddTime
+          parameter: 6
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Classroom2_2
+          parameterType: 2
+      endAction: 
+  - chooseName: ClassChoose0_State2
+    choose:
+      chooseItem:
+      - name: Ask about classmate with a bracelet
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: AddTime
+          parameter: 6
+          parameterType: 1
+        - methodName: ChangeApathyNum
+          parameter: -1
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Classroom2_0
+          parameterType: 2
+      - name: Listen In
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: AddTime
+          parameter: 6
+          parameterType: 1
+        - methodName: ChangeApathyNum
+          parameter: 2
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Classroom2_1
+          parameterType: 2
+      - name: Investigate Classroom
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: AddTime
+          parameter: 6
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Classroom2_2
+          parameterType: 2
+      - name: Talk to Rina Song
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: Classroom2_3
+          parameterType: 2
+      endAction: 
+  - chooseName: ClassChoose3
+    choose:
+      chooseItem:
+      - name: " \u201CDon\u2019t do it for me, do it for them.\u201D (Apathy - 2)"
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: ChangeApathyNum
+          parameter: -2
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Classroom3_1
+          parameterType: 2
+      - name: " \u201CYou\u2019re my only option.\u201D (Apathy +1)"
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: ChangeApathyNum
+          parameter: 1
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Classroom3_1
+          parameterType: 2
+      - name: " \u201CRina, they need your help.\u201D "
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: Classroom3_1
+          parameterType: 2
       endAction: 

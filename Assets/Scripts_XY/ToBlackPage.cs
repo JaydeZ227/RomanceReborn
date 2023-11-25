@@ -10,6 +10,11 @@ public class ToBlackPage : MonoBehaviour
     {
         canvasGroup = GetComponent<CanvasGroup>();
     }
+    private void OnEnable()
+    {
+        backTimer = 0;
+        isOver = false;
+    }
 
     public float backTime=2.0f;
     float backTimer = 0;
@@ -19,9 +24,18 @@ public class ToBlackPage : MonoBehaviour
         backTimer = 0;
         backTime = time;
         gameObject.SetActive(true);
-
-        canvasGroup.alpha =  backTimer / backTime;
+        isOver = false;
+        if (isShow)
+        {
+            canvasGroup.alpha = backTimer / backTime;
+        }
+        else
+        {
+            canvasGroup.alpha = 1 - backTimer / backTime;
+        }
+    
     }
+    public bool isShow = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +61,14 @@ public class ToBlackPage : MonoBehaviour
             endEvent?.Invoke();
             isOver = true;
         }
-        canvasGroup.alpha =backTimer / backTime;
+        if (isShow)
+        {
+            canvasGroup.alpha = backTimer / backTime;
+        }
+        else
+        {
+            canvasGroup.alpha = 1 - backTimer / backTime;
+        }
+        
     }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlotController : MonoBehaviour
 {
     static PlotController _instance;
+    EventHandlerToGameController eventHandle;
     public static PlotController Instance
     {
         get
@@ -13,6 +14,7 @@ public class PlotController : MonoBehaviour
             if (_instance == null)
             {
                 _instance = FindObjectOfType<PlotController>();
+                _instance.eventHandle = GameObject.FindGameObjectWithTag("EventHandle").GetComponent<EventHandlerToGameController>();
             }
             return _instance;
         }
@@ -23,7 +25,7 @@ public class PlotController : MonoBehaviour
     PlotSayItem[] plots ;
     public ChooseSystem chooseSystem;
     public GameObject[] chooseHide;
-   string nextSay;
+ //  string nextSay="";
     public void SetSay(PlotSayItem[] plots)
     {
         this.plots = plots;
@@ -32,14 +34,14 @@ public class PlotController : MonoBehaviour
         LoadSay();
     }
     public string samePlayerStr="same_player";
-
+    public List<string> jehaStrList = new List<string>() { };
     public float autoDelay = 0.5f;
     float autoTimer = 0;
     private void Update()
     {
         if (autoPlayLayer > 0 && say.gameObject.activeSelf)
         {
-            if (plots[plotIndex].endChooseGameName == "")
+            if (!chooseSystem.gameObject.activeSelf)//(plots[plotIndex].endChooseGameName == "")
             {
                 if (say.isEnd)
                 {
@@ -77,29 +79,59 @@ public class PlotController : MonoBehaviour
 
             if (plots[plotIndex].leftCharactorName == samePlayerStr)
             {
-                GameController.Instance.leftPlayer.SetState(GameController.Instance.same_player_cloth);
+                GameController.Instance.leftPlayer.SetState(GameController.Instance.GetPlayerFuShi());
             }
             else
             {
                 GameController.Instance.leftPlayer.SetState(plots[plotIndex].leftCharactorName);
             }
+            //Debug.Log(plots[plotIndex].middleCharactorName+""+ samePlayerStr);
+            if (plots[plotIndex].middleCharactorName == samePlayerStr)
+            {
+                GameController.Instance.middlePlayer.SetState(GameController.Instance.GetPlayerFuShi());
+            }
+            else
+            {
+
+                GameController.Instance.middlePlayer.SetState(plots[plotIndex].middleCharactorName);
+            }
             if (plots[plotIndex].rightCharactorName == samePlayerStr)
             {
-                GameController.Instance.rightPlayer.SetState(GameController.Instance.same_player_cloth);
+                GameController.Instance.rightPlayer.SetState(GameController.Instance.GetPlayerFuShi());
             }
             else
             {
 
                 GameController.Instance.rightPlayer.SetState(plots[plotIndex].rightCharactorName);
             }
-
+            foreach (var item in plots[plotIndex].loadSayEvent)
+            {
+                eventHandle.SendMassageToGameController(item);
+            }
+            /*
+            Debug.Log("Â²Â¥Â·Ã…Ã’Ã´ÃÂ§"+ plots[plotIndex].startClip);
+            if (plots[plotIndex].startClip != null)
+            {
+                
+                MusicController.Instance.PlayEffectByFrame(plots[plotIndex].startClip);
+            }
+            */
+            /*
             nextSay = plots[plotIndex].endNextSay;
             System.Action addAction = null;
+            addAction += () =>
+            {
+                if (plots[plotIndex].endActionName_ToGameController != "")
+                {
+                    GameController2.Instance.SendMessage(plots[plotIndex].endActionName_ToGameController);
+                }
+            };
             if (plots[plotIndex].sayEndAddPropName != "")
             {
                 addAction += () =>
                 {
                     GameController.Instance.SetPropToBag(plots[plotIndex].sayEndAddPropName);
+
                 };
             }
             if (plots[plotIndex].sayEndGetTipName != "")
@@ -141,33 +173,121 @@ public class PlotController : MonoBehaviour
                     addAction?.Invoke();
                 };
             }
+            */
+            say.endAction = () =>
+            {
+                foreach (var item in plots[plotIndex].jumpEndEvent)
+                {
+                    eventHandle.SendMassageToGameController(item);
+                }
+
+            };
         }
         else if(SceneManager.GetActiveScene().name == "GameScene2")
         {
-            GameController2.Instance.bgIcon.SetState(plots[plotIndex].changeBgName);
+            if (plots[plotIndex].changeBgName == "")
+            {
+
+            }
+            else if (plots[plotIndex].changeBgName == "curBG")
+            {
+
+            }
+            else
+            {
+                GameController2.Instance.bgIcon.SetState(plots[plotIndex].changeBgName);
+            }
+            /*
+            Debug.Log("Â²Â¥Â·Ã…Ã’Ã´ÃÂ§" + plots[plotIndex].startClip);
+            
+            if (plots[plotIndex].startClip != null)
+            {
+
+                MusicController.Instance.PlayEffectByFrame(plots[plotIndex].startClip);
+            }
+            */
+
             say.gameObject.SetActive(true);
             say.SetText(plots[plotIndex]);
 
             if (plots[plotIndex].leftCharactorName == samePlayerStr)
             {
-               // GameController2.Instance.leftPlayer.SetState(GameController2.Instance.same_player_cloth);
+                GameController2.Instance.leftPlayer.SetState(GameController2.Instance.GetPlayerFuShi());
+            }
+            else if (plots[plotIndex].leftCharactorName == GameController2.Instance.player_zombie)
+            {
+                GameController2.Instance.leftPlayer.SetState(GameController2.Instance.GetPlayerZombie());
+            }
+            else if (jehaStrList.Contains( plots[plotIndex].leftCharactorName ))
+            {
+                GameController2.Instance.leftPlayer.SetState(GameController2.Instance.GetJehaNameByApathyNum(plots[plotIndex].leftCharactorName));
             }
             else
             {
                 GameController2.Instance.leftPlayer.SetState(plots[plotIndex].leftCharactorName);
             }
+
             if (plots[plotIndex].rightCharactorName == samePlayerStr)
             {
-            //    GameController2.Instance.rightPlayer.SetState(GameController2.Instance.same_player_cloth);
+                GameController2.Instance.rightPlayer.SetState(GameController2.Instance.GetPlayerFuShi());
+            }
+            else if (jehaStrList.Contains(plots[plotIndex].rightCharactorName))
+            {
+                GameController2.Instance.leftPlayer.SetState(GameController2.Instance.GetJehaNameByApathyNum(plots[plotIndex].rightCharactorName));
+            }
+            else if (plots[plotIndex].rightCharactorName == GameController2.Instance.player_zombie)
+            {
+                GameController2.Instance.rightPlayer.SetState(GameController2.Instance.GetPlayerZombie());
             }
             else
             {
 
                 GameController2.Instance.rightPlayer.SetState(plots[plotIndex].rightCharactorName);
             }
+            if (plots[plotIndex].middleCharactorName == samePlayerStr)
+            {
+                GameController2.Instance.middlePlayer.SetState(GameController2.Instance.GetPlayerFuShi());
+            }
+            else if(plots[plotIndex].middleCharactorName == GameController2.Instance.player_zombie)
+            {
+                GameController2.Instance.middlePlayer.SetState(GameController2.Instance.GetPlayerZombie());
+            }
+            else if (jehaStrList.Contains(plots[plotIndex].middleCharactorName))
+            {
+                GameController2.Instance.leftPlayer.SetState(GameController2.Instance.GetJehaNameByApathyNum(plots[plotIndex].middleCharactorName));
+            }
+            else
+            {
 
+                GameController2.Instance.middlePlayer.SetState(plots[plotIndex].middleCharactorName);
+            }
+            foreach (var item in plots[plotIndex].loadSayEvent)
+            {
+                eventHandle.SendMassageToGameController(item);
+            }
+            say.endAction = () =>
+            {
+                foreach (var item in plots[plotIndex].jumpEndEvent)
+                {
+                    eventHandle.SendMassageToGameController(item);
+                }
+                /*
+                chooseSystem.SetChoose(GameController2.Instance.chooseSO.GetChoose(plots[plotIndex].endChooseGameName).choose);
+                addAction?.Invoke();
+                */
+            };
+            /*
             nextSay = plots[plotIndex].endNextSay;
             System.Action addAction = null;
+            
+            addAction += () =>
+            {
+                if (plots[plotIndex].jumpTextEndAction_ToGameController != "")
+                {
+                    GameController2.Instance.SendMessage(plots[plotIndex].jumpTextEndAction_ToGameController);
+                }
+            };
+
             if (plots[plotIndex].sayEndAddPropName != "")
             {
                 addAction += () =>
@@ -185,12 +305,15 @@ public class PlotController : MonoBehaviour
             if (plots[plotIndex].sayEndLockCharactor != "")
             {
                 string cname = plots[plotIndex].sayEndLockCharactor;
+                
                 addAction += () =>
                 {
                     Debug.Log("add to characrtor:" + cname);
                     GameController2.Instance.SetCharatorToDic(plots[plotIndex].sayEndLockCharactor);
                 };
+                
             }
+           
             if (plots[plotIndex].endChooseGameName == "")
             {
                 foreach (var hide in chooseHide)
@@ -214,31 +337,50 @@ public class PlotController : MonoBehaviour
                     addAction?.Invoke();
                 };
             }
+            */
+            foreach (var hide in chooseHide)
+            {
+                hide.SetActive(!plots[plotIndex].IsJumpEndChoose());
+            }
+          
         }
+    }
+    public void TouchSay()
+    {
+        if (!say.isEnd)
+        {
+            say.ShowAll();
+            return;
+        }
+        NextSay();
     }
     public void NextSay()
     {
+        if (!say.isEnd)
+        {
+            say.ShowAll();
+        }
+        var thisPlot = plots[plotIndex];
+       
         if (SceneManager.GetActiveScene().name == "GameScene1")
         {
-            if (!say.isEnd)
-            {
-                say.ShowAll();
-            }
+          
             //use Next Action
+            /*
             if (plots[plotIndex].endActionName_ToGameController != "")
             {
                 GameController.Instance.SendMessage(plots[plotIndex].endActionName_ToGameController);
             }
-
-            if (nextSay == "")
-            {
+            */
+           // if (nextSay == "")
+           // {
                 plotIndex++;
-            }
-            else
-            {
+          // }
+          //  else
+          //  {
 
-                SetSay(GameController.Instance.plotSO.GetPlot(nextSay).plots);
-            }
+          //      SetSay(GameController.Instance.plotSO.GetPlot(nextSay).plots);
+          //  }
 
 
             if (plotIndex < plots.Length)
@@ -249,35 +391,44 @@ public class PlotController : MonoBehaviour
             {
                 say.gameObject.SetActive(false);
                 GameController.Instance.leftPlayer.SetState("");
+                GameController.Instance.middlePlayer.SetState("");
                 GameController.Instance.rightPlayer.SetState("");
             }
         }
         else if (SceneManager.GetActiveScene().name == "GameScene2")
         {
-            if (!say.isEnd)
-            {
-                say.ShowAll();
-            }
-            //use Next Action
-            if (plots[plotIndex].ApathyNumChange != 0)
-            {
-                GameController2.Instance.ChangeApathyNum(plots[plotIndex].ApathyNumChange);
-                // GameController2.Instance.SendMessage(plots[plotIndex].endActionName_ToGameController);
-            }
-            if (plots[plotIndex].endActionName_ToGameController != "")
-            {
-                GameController2.Instance.SendMessage(plots[plotIndex].endActionName_ToGameController);
-            }
-          
-            if (nextSay == "")
-            {
-                plotIndex++;
-            }
-            else
-            {
+            
 
-                SetSay(GameController2.Instance.plotSO.GetPlot(nextSay).plots);
-            }
+                //use Next Action
+
+                /*
+                if (thisPlot.ApathyNumChange != 0)
+                {
+                    GameController2.Instance.ChangeApathyNum(thisPlot.ApathyNumChange);
+                    // GameController2.Instance.SendMessage(plots[plotIndex].endActionName_ToGameController);
+                }
+
+                if (thisPlot.addTimeCount != 0)
+                {
+                    GameController2.Instance.AddTime(thisPlot.addTimeCount);
+                    // GameController2.Instance.SendMessage(plots[plotIndex].endActionName_ToGameController);
+                }
+                if (thisPlot.SetTimeCount != 0)
+                {
+                    GameController2.Instance.ChangeTime(thisPlot.SetTimeCount);
+                    // GameController2.Instance.SendMessage(plots[plotIndex].endActionName_ToGameController);
+                }
+                */
+                // Debug.Log("NextSay"+ nextSay);
+                //if (nextSay == "")
+                //  {
+                plotIndex++;
+          //  }
+          //  else
+         //  {
+
+              //  SetSay(GameController2.Instance.PlotSO.GetPlot(nextSay).plots);
+          //  }
 
 
             if (plotIndex < plots.Length)
@@ -288,29 +439,42 @@ public class PlotController : MonoBehaviour
             {
                 say.gameObject.SetActive(false);
                 GameController2.Instance.leftPlayer.SetState("");
+                GameController2.Instance.middlePlayer.SetState("");
                 GameController2.Instance.rightPlayer.SetState("");
             }
+            /*
+            if (thisPlot.endActionName_ToGameController != "")
+            {
+                GameController2.Instance.SendMessage(thisPlot.endActionName_ToGameController);
+            }
+            */
         }
-     
+        foreach (var item in thisPlot.touchNextEvent)
+        {
+            eventHandle.SendMassageToGameController(item);
+        }
     }
 }
 
 [System.Serializable]
 public class PlotSayItem : PlotItem
 {
-    public string changeBgName;//±³¾°Í¼Æ¬Ãû×Ö
-    public string charactorName;//Ëµ»°½ÇÉ«Ãû×Ö
+    [TextArea(4, 10)]
+    public string sayContent;//è¯´è¯å†…å®¹
+    public FontStyle fontStyle = FontStyle.Normal;
+    public string changeBgName;//æ¢èƒŒæ™¯
+    public string charactorName;//äººç‰©åå­—
     public int nameSetType = 0;
     public string leftCharactorName = "";
+    public string middleCharactorName = "";
     public string rightCharactorName = "";
     
-    [TextArea(4,10)]
-    public string sayContent;//Ëµ»°ÄÚÈÝ
+   /*
   
     public string endChooseGameName;
 
     public string endActionName_ToGameController;
-
+    public string jumpTextEndAction_ToGameController;
     public string endNextSay="";
     [Header("say end add prop to bag")]
     public string sayEndAddPropName = "";
@@ -318,8 +482,27 @@ public class PlotSayItem : PlotItem
     public string sayEndGetTipName;
     [Header("end get charactor dic")]
     public string sayEndLockCharactor = "";
-    public int ApathyNumChange;
 
+    public int addTimeCount;
+    public int SetTimeCount = 0;
+    public int ApathyNumChange;
+    */
+  //  public AudioClip startClip;
+    public MethodEvent[] loadSayEvent;
+    public MethodEvent[] jumpEndEvent;
+    public MethodEvent[] touchNextEvent;
+    public bool IsJumpEndChoose()
+    {
+        bool isContine = false;
+        foreach (var item in jumpEndEvent)
+        {
+            if (item.methodName== "LoadNextChoose")
+            {
+                isContine = true;
+            }
+        }
+        return isContine;
+    }
 }
 [System.Serializable]
 public class PlotItem

@@ -15,44 +15,80 @@ MonoBehaviour:
   chooseMessages:
   - chooseName: BedRoom_0
     choose:
-      titleContent: 
       chooseItem:
       - name: 'Brush my hair and keep it down. '
-        chooseAction: 
-        chooseAction2: SetNextPlayerClothA
-        chooseEndLoadSay: BedRoom_1_0
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: AddHair_Up
+          parameter: 
+          parameterType: 0
+        - methodName: LoadNextSay
+          parameter: BedRoom_1_0
+          parameterType: 2
       - name: Pull hair into a ponytail.
-        chooseAction: SetA
-        chooseAction2: SetNextPlayerClothB
-        chooseEndLoadSay: BedRoom_1_1
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: AddHair_Down
+          parameter: 
+          parameterType: 0
+        - methodName: SetMaWeiOrGym
+          parameter: 
+          parameterType: 0
+        - methodName: LoadNextSay
+          parameter: BedRoom_1_1
+          parameterType: 2
       endAction: 
   - chooseName: BedRoom_1
     choose:
-      titleContent: 
       chooseItem:
       - name: Stylized School Uniform
-        chooseAction: SetA
-        chooseAction2: 
-        chooseEndLoadSay: BedRoom_2_0
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: AddCloth_uniform
+          parameter: 
+          parameterType: 0
+        - methodName: LoadNextSay
+          parameter: BedRoom_2_0
+          parameterType: 2
       - name: Gym Clothes
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: BedRoom_2_1
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: AddCloth_gym
+          parameter: 
+          parameterType: 0
+        - methodName: LoadNextSay
+          parameter: BedRoom_2_1
+          parameterType: 2
+        - methodName: SetMaWeiOrGym
+          parameter: 
+          parameterType: 0
       endAction: 
   - chooseName: Classroom_0
     choose:
-      titleContent: 
       chooseItem:
       - name: Listen in to classmates
-        chooseAction: ChooseInScrool
-        chooseAction2: 
-        chooseEndLoadSay: 
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: Classroom_1_0
+          parameterType: 2
       - name: Scroll through phone
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: Classroom_1_1
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: ChooseInScrool
+          parameter: 
+          parameterType: 0
       - name: Read Romance story
-        chooseAction: 
-        chooseAction2: 
-        chooseEndLoadSay: Classroom_1_2
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: LoadNextSay
+          parameter: Classroom_1_2
+          parameterType: 2
       endAction: 

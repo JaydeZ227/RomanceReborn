@@ -6,8 +6,52 @@ using UnityEngine.UI;
 
 public class GameController2 : MonoBehaviour
 {
-    public PlotSO plotSO;
-    public ChooseSO chooseSO;
+
+    GameControllerSimpleEvent gameControllerSimpleEvent;
+
+    public string GetJehaNameByApathyNum(string jeha_img)
+    {
+        string s = jeha_img;
+        if (curApathyNum <= 3)
+        {
+            // s += "_" + 1;
+        }
+        else if (curApathyNum <= 7)
+        {
+            s += "_" + 1;
+        }
+        else if (curApathyNum <= 11)
+        {
+            s += "_" + 2;
+        }
+        else
+        {
+            s += "_" + 3;
+        }
+        return s;
+    }
+
+    public Gradient textColorGradient;
+    public Color GetTextColor()
+    {
+        return textColorGradient.Evaluate((float)curApathyNum / maxApathyNum);
+
+    }
+
+    public PlotSO PlotSO
+    {
+        get
+        {
+            return gameControllerSimpleEvent.plotSO;
+        }
+    }
+    public ChooseSO ChooseSO
+    {
+        get
+        {
+            return gameControllerSimpleEvent.chooseSO;
+        }
+    }
     public StateIcon_BG bgIcon;
     public HideToShow bgChangeHideCanvasGorup;
     public float changeBgHideTime = 1.5f;
@@ -30,16 +74,7 @@ public class GameController2 : MonoBehaviour
         }
         ApathyNumText.text = curApathyNum + "";
     }
-    private void Awake()
-    {
-        bgChangeHideCanvasGorup.Open();
-        bgIcon.onChange += () =>
-        {
-            cor = StartCoroutine(changeBGIE());
-        };
-        ApathyNumText.text = curApathyNum + "";
-        timeText.text = ((int)(curTime / 3600)).ToString("#00") + ":" + ((int)(curTime % 3600 / 60)).ToString("#00");
-    }
+
     Coroutine cor;
     IEnumerator changeBGIE()
     {
@@ -50,6 +85,7 @@ public class GameController2 : MonoBehaviour
         yield return new WaitForSecondsRealtime(changeBgHideTime);
         bgChangeHideCanvasGorup.OpenByAnim(() =>
         {
+            Debug.Log("切换场景结束");
             Time.timeScale = 1;
             bgChangeHideCanvasGorup.GetComponent<CanvasGroup>().blocksRaycasts = true;
         });
@@ -57,7 +93,7 @@ public class GameController2 : MonoBehaviour
 
 
     }
-    public StateIcon_Anim leftPlayer, rightPlayer;
+    public StateIcon_Anim leftPlayer, middlePlayer, rightPlayer;
     static GameController2 _instance;
     public static GameController2 Instance {
         get
@@ -65,29 +101,143 @@ public class GameController2 : MonoBehaviour
             if (_instance == null)
             {
                 _instance = FindObjectOfType<GameController2>();
+                _instance.gameControllerSimpleEvent = _instance.GetComponent<GameControllerSimpleEvent>();
             }
             return _instance;
         }
     }
 
+    public AudioClip startMusic;
     public enum GameStateEnum
     {
-        StartBedRoom, SchoolGate, MusicRoom, Gym, NurseOffice, ClassRoom, G
+        StartBedRoom, SchoolGate, MusicRoom, Gym, NurseOffice, ClassRoom, Shop2ndFloor, Library, OverScene
 
     }
+    public bool isLockClass2
+    {
+        get
+        {
+            return bagItemNameList.Contains("bat");
+        }
+    }
+    public bool isLockLibaray = true;
+    public void UnLockLibaray()
+    {
+        isLockLibaray = false;
+    }
+    public bool isLockStair = true;
+    public void UnLockStair()
+    {
+        isLockStair = false;
+    }
+
+    public bool IsCanEnterTargetScene(string sceneName)
+    {
+        Debug.Log("scenenan:"+sceneName+":");
+        bool isCanEnter = false;
+        switch (sceneName)
+        {
+            case "NurseOffice":
+                {
+                    if (curTime<=21*60*60)
+                    {
+                        isCanEnter = true;
+                    }
+                }
+                break;
+            case "Gym":
+                {
+                    if (curTime <= 22 * 60 * 60)
+                    {
+                        isCanEnter = true;
+                    }
+                }
+                break;
+            case "MusicRoom":
+                {
+                    isCanEnter = true;
+                    Debug.Log("判断音乐室");
+                }
+                break;
+            case "Classroom":
+                {
+                    if (classEnterCount == 0)
+                    {
+                        if (curTime <= 19 * 60 * 60)
+                        {
+                            isCanEnter = true;
+                        }
+                    }
+                    else if (classEnterCount == 1)
+                    {
+                        if (curTime <= 7 * 60 * 60)
+                        {
+                            isCanEnter = true;
+                        }
+                    }
+                    else if(classEnterCount>1)
+                    {
+                        Debug.Log("判断第三次");
+                        if (!isLockClass2)
+                        {
+                            isCanEnter =true;
+                        }
+                    }
+                }
+                break;
+            case "Library":
+                {
+                    if (!isLockLibaray)
+                    {
+                        isCanEnter = true;
+                    }
+                   
+                }
+                break;
+            case "Stairs":
+                {
+                    Debug.Log("panduan  stair");
+                    if (!isLockStair)
+                    {
+                        isCanEnter = true;
+                    }
+                  
+                }
+                break;
+            case "Shop2ndFloor":
+                {
+                    isCanEnter = true;
+                }
+                break;
+            case "SchoolGate":
+                {
+                    isCanEnter = true;
+                }
+                break;
+            case "OverScene":
+                {
+                    isCanEnter = true;
+                }
+                break;
+            default:
+                break;
+        }
+        return isCanEnter;
+    }
+
     #region 时间
     public Text timeText;
     public float curTime = 6 * 60 * 60;
-    public void AddTime(int h)
+    public void AddTime(int s)
     {
-        curTime += h * 60 * 60;
+        curTime += s;
         while (curTime >= 24 * 60 * 60)
         {
             curTime -= 24 * 60 * 60;
         }
         timeText.text = ((int)(curTime / 3600)).ToString("#00") + ":" + ((int)(curTime % 3600 / 60)).ToString("#00");
     }
-    public void ChangeTime(float time)
+    public void SetTime(int time)
     {
         curTime = time;
         while (curTime >= 24 * 60 * 60)
@@ -102,11 +252,12 @@ public class GameController2 : MonoBehaviour
     #endregion
     #region 地图跳转
     public string mapToMusicRoom_Plot = "MusicRoom0";
-    public string mapToNurseOffice_Plot = "NurseOffice1_0";
-    public string mapToGym_Plot = "Gmy1_0";
-    public string mapToClassroom_Plot = "Classroom1_0";
-    public void  LoadSceneByMap(string sceneName)
+
+    public MapPage map;
+    public void LoadSceneByMap(string sceneName)
     {
+        ApathyShow.SetActive(false);
+        map.SetPosName(sceneName);
         switch (sceneName)
         {
             case "NurseOffice":
@@ -129,66 +280,176 @@ public class GameController2 : MonoBehaviour
                     GameState = GameStateEnum.ClassRoom;
                 }
                 break;
+            case "Library":
+                {
+                    GameState = GameStateEnum.Library;
+                }
+                break;
+            case "Shop2ndFloor":
+                {
+                    GameState = GameStateEnum.Shop2ndFloor;
+                }
+                break;
+            case "Stairs":
+                {
+                    PlotController.Instance.SetSay(PlotSO.GetPlot(stairsSceneStart).plots);
+                }
+                break;
+            case "SchoolGate":
+                {
+                    GameState = GameStateEnum.SchoolGate;
+                }
+                break;
+            case "OverScene":
+                {
+                    GameState = GameStateEnum.OverScene;
+                }
+                break;
             default:
                 break;
         }
     }
+    /// <summary>
+    /// 返回学校 用动画
+    /// </summary>
     public void ResetGameToSchoolGate()
     {
-      
-        GameState = GameStateEnum.SchoolGate;
+
+        showBlood.SetActive(true);
+        endPage.endEvent.RemoveAllListeners();
+
+        endPage.endEvent.AddListener(() =>
+        {
+            endPage.gameObject.SetActive(false);
+            showBlood2.SetActive(false);
+            showBlood.SetActive(false);
+            GameState = GameStateEnum.SchoolGate;
+        });
     }
     public void CloseSayBar()
     {
         PlotController.Instance.say.gameObject.SetActive(false);
     }
     #endregion
+    #region 巴士
+    public string bsNextSay = "BusStop1";
+    public string bsCharactorAllName = "zombie";
+    public string bsBgName = "OnTheBus";
+    public void ShowBSZombie()
+    {
+        StartCoroutine(busShowIE());
+    }
+    IEnumerator busShowIE()
+    {
+        bgIcon.SetState(bsBgName);
+        leftPlayer.SetState(bsCharactorAllName);
+        middlePlayer.SetState(bsCharactorAllName);
+        rightPlayer.SetState(bsCharactorAllName);
+        foreach (var item in PlotController.Instance.chooseHide)
+        {
+            item.SetActive(false);
+        }
+        PlotController.Instance.say.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        AddTime(30 * 60);
+        // PlotController.Instance.say.gameObject.SetActive(true);
+        PlotController.Instance.SetSay(PlotSO.GetPlot(bsNextSay).plots);
+        DieToBus();
+    }
+    public bool isDieToBus = false;
+    public void DieToBus()
+    {
+        isDieToBus = true;
+    }
+    #endregion
     #region 第一个场景 黑屏闹钟
+
+    public string bedendNextSay = "3_2_1";
+    public string bedendCharactorAllName = "zombie";
+    public string bedendBgName = "OnTheBus";
+    public void ShowBedZombie()
+    {
+        StartCoroutine(BedShowIE());
+    }
+    IEnumerator BedShowIE()
+    {
+        bgIcon.SetState(bedendBgName);
+        leftPlayer.SetState(bedendCharactorAllName);
+        middlePlayer.SetState(bedendCharactorAllName);
+        rightPlayer.SetState(bedendCharactorAllName);
+        SetTime(60*60*24-30*60);
+        foreach (var item in PlotController.Instance.chooseHide)
+        {
+            item.SetActive(false);
+        }
+        PlotController.Instance.say.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        // PlotController.Instance.say.gameObject.SetActive(true);
+        PlotController.Instance.SetSay(PlotSO.GetPlot(bedendNextSay).plots);
+        DieToBus();
+    }
+
     public BackPage backPage;
     public string startLoadSay = "";
     public string startSceneName = "";
+    public GameObject showBlood;
+    public GameObject showBlood2;
+    public ToBlackPage endPage;
     public void ResetGameToHome()
     {
-        GameState = GameStateEnum.StartBedRoom;
+        showBlood.SetActive(true);
+        endPage.endEvent.RemoveAllListeners();
+
+        endPage.endEvent.AddListener(() =>
+        {
+            endPage.gameObject.SetActive(false);
+            showBlood2.SetActive(false);
+            showBlood.SetActive(false);
+            
+            GameState = GameStateEnum.StartBedRoom;
+        });
     }
     [Header("玩家的服饰")]
     string samePlayerStr = "";
     public string basePlayerStr = "player";
-    public string HairAddStr1 = "MaWei";
-    public string HairAddStr2 = "PiFa";
-    public string clothAddStr1 = "XiaoFu";
-    public string clothAddStr2 = "YunDongFu";
+    public string HairAddStr_Up = "hairUp";
+    public string HairAddStr_Down = "hairDown";
+    public string clothAddStr_uniform = "uniform";
+    public string clothAddStr_gym = "gym";
     public string GetPlayerFuShi()
     {
         return samePlayerStr;
     }
-    public void AddHair1()
+    public void AddHair_Up()
     {
-        samePlayerStr += "_" + HairAddStr1;
+        samePlayerStr += "_" + HairAddStr_Up;
     }
-    public void AddHair2()
+    public void AddHair_Down()
     {
-        samePlayerStr += "_" + HairAddStr2;
+        samePlayerStr += "_" + HairAddStr_Down;
     }
-    public void AddCloth1()
+    public void AddCloth_uniform()
     {
-        samePlayerStr += "_" + clothAddStr1;
+        samePlayerStr += "_" + clothAddStr_uniform;
     }
-    public void AddCloth2()
+    public void AddCloth_gym()
     {
-        samePlayerStr += "_" + clothAddStr2;
+        samePlayerStr += "_" + clothAddStr_gym;
     }
-    public string busStop0_Say = "Choose_BusStop0";
-    public void ChangeBedStopToChoose()
+    public string busStop0_SayMinTo2 = "BusStop0";
+    public string busStop0_SayMaxTo2 = "Choose_BusStop0";
+    public void ChangeBedStopToChoose(int num)
     {
-        if (curApathyNum >= 2)
+        if (curApathyNum >=num)
         {
-            PlotController.Instance.SetSay(plotSO.GetPlot(busStop0_Say).plots);
+            PlotController.Instance.SetSay(PlotSO.GetPlot(busStop0_SayMaxTo2).plots);
         }
         else
         {
-           // Debug.Log("进入学校");
-            GameState = GameStateEnum.SchoolGate;
+            PlotController.Instance.SetSay(PlotSO.GetPlot(busStop0_SayMinTo2).plots);
+            //GameState = GameStateEnum.SchoolGate;
+
+
         }
     }
     public string SchoolGate_morn_BgStr = "SchoolGate_morn";
@@ -206,17 +467,156 @@ public class GameController2 : MonoBehaviour
     }
     #endregion
     #region Gym Scene
+
     public bool isEnteredGym = false;
-    public string gymSayStr1="Gmy1_0";
-    public string gymSayStr2= "Gmy1_1_1";
+    public string gymSayChooStr1 = "Gmy2_1_1";
+    public string gymSayChooStr2 = "Gmy2_1_2";
+    public string mapToGym_Plot = "Gmy1_0";
+    public string mapToGym_Plot2 = "ChooseGmy_0";
+    public void JudgeGymByJumpEnd()
+    {
+        if (isEnterJiaoshi)
+        {
+
+
+        }
+        else if (isEnterHuShi)
+        {
+
+        }
+        else
+        {
+            ResetGameToSchoolGate();
+        }
+    }
+    public void JudgeGymEnterToNext()
+    {
+        if (isEnterJiaoshi)
+        {
+            PlotController.Instance.SetSay(PlotSO.GetPlot(gymSayChooStr1).plots);
+
+        }
+        else if (isEnterHuShi)
+        {
+            PlotController.Instance.SetSay(PlotSO.GetPlot(gymSayChooStr2).plots);
+        }
+
+    }
     public void SetEnterGym()
     {
         isEnteredGym = true;
 
     }
     #endregion
-    GameStateEnum _gameState = GameStateEnum.StartBedRoom;
+    #region 医护办公室
+
+    public bool isEnterHuShi = false;
+    public void setEnterHuShi()
+    {
+        isEnterHuShi = true;
+    }
+
+    public string mapToNurseOffice_Plot_DieBus = "NurseOffice1_0";
+    public string mapToNurseOffice_Plot_NoDieBus = "NurseOffice1_1";
+
+
+    #endregion
+    #region 教室
+    public bool isEnterJiaoshi = false;
+    public void SetEnterJiaoShi()
+    {
+        isEnterJiaoshi = true;
+    }
+    int classEnterCount = 0;
+    public string mapToClassroom_Plot_Count1 = "Classroom1_0";
+    public string mapToClassroom_Plot_Count2 = "Classroom1_0";
+    public string mapToClassroom_Plot_Count3 = "Classroom1_0";
+
+    public string classRoomChooseByNoEnter = "ClassChoose0_State1";
+    public string classRoomChooseByEnter = "ClassChoose0_State2";
+    public void LoadChooseByClassRoom()
+    {
+        if (isEnteredGym || isEnterHuShi)
+        {
+            PlotController.Instance.chooseSystem.SetChoose(ChooseSO.GetChoose(classRoomChooseByEnter).choose);
+        }
+        else
+        {
+            PlotController.Instance.chooseSystem.SetChoose(ChooseSO.GetChoose(classRoomChooseByNoEnter).choose);
+
+        }
+    }
+
+    #endregion
+    #region Library 图书馆
+    public string stairsSceneStart = "";
+    public string LibrarySceneStart = "Library0";
+    public string GetChooseLibrary_noChicken = "Library1_State1";
+    public string GetChooseLibrary_hasChicken = "Library1_State2";
+    public void EnterChooseLibraryByPropChicken()
+    {
+        if (bagItemNameList.Contains("Chicken"))
+        {
+            PlotController.Instance.chooseSystem.SetChoose(ChooseSO.GetChoose(GetChooseLibrary_hasChicken).choose);
+        }
+        else
+        {
+            PlotController.Instance.chooseSystem.SetChoose(ChooseSO.GetChoose(GetChooseLibrary_noChicken).choose);
+        }
+    }
+    public string Library2_0_0Next = "Library2_0_1";
+    public GameObject libraryTipShow;
+    public void ShowTipLibary()
+    {
+        libraryTipShow.SetActive(true);
+    }
+    public void LoadNextLibraray()
+    {
+        PlotController.Instance.SetSay(PlotSO.GetPlot(Library2_0_0Next).plots);
+    }
+    #endregion
+    #region Shop2ndFloor 商店;
+    public string Stop2ndFloorStart = "Shop2ndFloor0";
+    #endregion
+    #region OverScene 结束场景
+    public string OverSceneStart = "Alpathy12Scene0";
+    public string OverSceneEndSay = "Apathy12Scene1";
+    public GameObject resetButton;
+    public GameObject bloodShow_12end;
+    public void ShowBlood()
+    {
+        bloodShow_12end.SetActive(true);
+    }
+    public void ShowNextSay_Apathy12()
+    {
+        PlotController.Instance.SetSay(PlotSO.GetPlot(OverSceneEndSay).plots);
+    }
     
+    public void ResetGame()
+    {
+        //LocalData.levelBagStr = new List<string>(bagItemNameList.ToArray());
+        //LocalData.levelCharactorStr = new List<string>(charactorNameList.ToArray());
+        SceneManager.LoadScene("GameScene1");
+    }
+    public void ShowResetButton()
+    {
+        resetButton.SetActive(true);
+    }
+    #endregion
+    GameStateEnum _gameState = GameStateEnum.StartBedRoom;
+    public string player_zombie = "player_zombie";
+    public string GetPlayerZombie()
+    {
+        if (GetPlayerFuShi().Contains("gym"))
+        {
+            return "player_zombie_gym";
+        }
+        else
+        {
+            return "player_zombie_uniform";
+        }
+    }
+    public GameObject ApathyShow;
     public GameStateEnum GameState
     {
         get
@@ -226,10 +626,18 @@ public class GameController2 : MonoBehaviour
         set
         {
             _gameState = value;
+            PlotController.Instance.chooseSystem.gameObject.SetActive(false);
             switch (_gameState)
             {
                 case GameStateEnum.StartBedRoom:
                     {
+                        PlotController.Instance.say.gameObject.SetActive(false);
+                        leftPlayer.SetState("");
+                        middlePlayer.SetState("");
+                        rightPlayer.SetState("");
+                        MusicController.Instance.PlayEffectByFrame
+                            (startMusic);
+                        SetTime(6*60*60);
                         //初始化玩家服饰
                         samePlayerStr = basePlayerStr;
 
@@ -237,42 +645,99 @@ public class GameController2 : MonoBehaviour
                         bgIcon.SetState(startSceneName);
                         backPage.SetBackground(2.0f,()=> 
                         {
-                        PlotController.Instance.SetSay(plotSO.GetPlot(startLoadSay).plots);
+                            //Debug.Log(PlotSO);
+                        PlotController.Instance.SetSay(PlotSO.GetPlot(startLoadSay).plots);
                         });
                     }
                     break;
                 case GameStateEnum.SchoolGate:
                     {
+                        map.SetPosName("SchoolGate");
+                        SetTime(7 * 60 * 60);
                         Debug.Log("进入学校门口");
                         CloseSayBar();
                         bgIcon.SetState(SchoolGate_morn_BgStr);
                         leftPlayer.SetState("");
+                        middlePlayer.SetState(GetJehaNameByApathyNum("Jeha_transition"));
                         rightPlayer.SetState("");
+                        PlotController.Instance.say.gameObject.SetActive(false);
+                        ApathyShow.SetActive(true);
+                        if (curApathyNum>=12)
+                        {
+                            LoadSceneByMap("OverScene");
+                        }
+
                     }
                     break;
                 case GameStateEnum.MusicRoom:
                     {
 
-                        PlotController.Instance.SetSay(plotSO.GetPlot(mapToMusicRoom_Plot).plots);
+                        PlotController.Instance.SetSay(PlotSO.GetPlot(mapToMusicRoom_Plot).plots);
 
                     }
                     break;
                 case GameStateEnum.Gym:
                     {
-                        PlotController.Instance.SetSay(plotSO.GetPlot(mapToGym_Plot).plots);
+                        if (isEnteredGym)
+                        {
+                            PlotController.Instance.SetSay(PlotSO.GetPlot(mapToGym_Plot2).plots);
+                        }
+                        else
+                        {
+                            PlotController.Instance.SetSay(PlotSO.GetPlot(mapToGym_Plot).plots);
+                        }
+                      
+                        SetEnterGym();
                     }
                     break;
                 case GameStateEnum.NurseOffice:
                     {
-                        PlotController.Instance.SetSay(plotSO.GetPlot(mapToNurseOffice_Plot).plots);
+                        if (isDieToBus)
+                        {
+                            PlotController.Instance.SetSay(PlotSO.GetPlot(mapToNurseOffice_Plot_DieBus).plots);
+                        }
+                        else
+                        {
+                            PlotController.Instance.SetSay(PlotSO.GetPlot(mapToNurseOffice_Plot_NoDieBus).plots);
+                        }
+                        setEnterHuShi();
                     }
                     break;
                 case GameStateEnum.ClassRoom:
                     {
-                        PlotController.Instance.SetSay(plotSO.GetPlot(mapToClassroom_Plot).plots);
+                        if (classEnterCount == 0)
+                        {
+                            PlotController.Instance.SetSay(PlotSO.GetPlot(mapToClassroom_Plot_Count1).plots);
+                            AddTime(5*60*60);
+                        }
+                        else if (classEnterCount == 1)
+                        {
+                            PlotController.Instance.SetSay(PlotSO.GetPlot(mapToClassroom_Plot_Count2).plots);
+                            AddTime(5 * 60 * 60);
+                        }
+                        else if (classEnterCount >1)
+                        {
+
+                            PlotController.Instance.SetSay(PlotSO.GetPlot(mapToClassroom_Plot_Count3).plots);
+                        }
+                        classEnterCount++;
+                        SetEnterJiaoShi();
                     }
                     break;
-                case GameStateEnum.G:
+                case GameStateEnum.Library:
+                    {
+                        PlotController.Instance.SetSay(PlotSO.GetPlot(LibrarySceneStart).plots);
+                    }
+                    break;
+                case GameStateEnum.Shop2ndFloor:
+                    {
+                        PlotController.Instance.SetSay(PlotSO.GetPlot(Stop2ndFloorStart).plots);
+                    }
+                    break;
+                case GameStateEnum.OverScene:
+                    {
+                        PlotController.Instance.SetSay(PlotSO.GetPlot(OverSceneStart).plots);
+                    }
                     break;
                 default:
                     break;
@@ -304,8 +769,21 @@ public class GameController2 : MonoBehaviour
     public List<string> charactorNameList = new List<string>();
     public void SetCharatorToDic(string s)
     {
+        if (charactorNameList.Contains(s))
+        {
+            return;
+        }
         charactorNameList.Add(s);
         Debug.Log("add to charactor dic:" + s);
+    }
+    public void RemoveCharactorToDic(string s)
+    {
+        if (!charactorNameList.Contains(s))
+        {
+            return;
+        }
+        charactorNameList.Remove(s);
+        Debug.Log("remove to charactor dic:" + s);
     }
     public ToBlackPage bloodShow;
     public float endBloodTime = 2;
@@ -315,22 +793,37 @@ public class GameController2 : MonoBehaviour
     }
     public void BackMenu()
     {
+      //  LocalData.levelBagStr = new List<string>();
+        //LocalData.levelCharactorStr = new List<string>();
+      //  LocalData.repeatTipStrList = new List<string>();
         SceneManager.LoadScene("StartScene");
     }
+    private void Awake()
+    {
+       var t= GameController2.Instance;
+        //初始化数据
+        //bagItemNameList = new List<string>(LocalData.levelBagStr);
+       // charactorNameList = new List<string>(LocalData.levelCharactorStr);
 
-   
+        bgChangeHideCanvasGorup.Open();
+        bgIcon.onChange += () =>
+        {
+            cor = StartCoroutine(changeBGIE());
+        };
+        ApathyNumText.text = curApathyNum + "";
+        timeText.text = ((int)(curTime / 3600)).ToString("#00") + ":" + ((int)(curTime % 3600 / 60)).ToString("#00");
+    }
+
     private void Start()
     {
         GameState = GameStateEnum.StartBedRoom;
         leftPlayer.SetState("");
+        middlePlayer.SetState("");
         rightPlayer.SetState("");
     }
+    
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            AddTime(2);
-        }
         switch (GameState)
         {
             case GameStateEnum.StartBedRoom:
@@ -353,7 +846,20 @@ public class GameController2 : MonoBehaviour
                 break;
             case GameStateEnum.ClassRoom:
                 break;
-            case GameStateEnum.G:
+            case GameStateEnum.Library:
+                {
+
+                }
+                break;
+            case GameStateEnum.Shop2ndFloor:
+                {
+
+                }
+                break;
+            case GameStateEnum.OverScene:
+                {
+
+                }
                 break;
             default:
                 break;

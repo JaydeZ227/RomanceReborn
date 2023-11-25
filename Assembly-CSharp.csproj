@@ -64,25 +64,35 @@
     <Compile Include="Assets\Scripts_XY\ChooseSystem.cs" />
     <Compile Include="Assets\Scripts_XY\ChangeSPButton.cs" />
     <Compile Include="Assets\Scripts_XY\CountOpen.cs" />
+    <Compile Include="Assets\PlotShowAllButton.cs" />
     <Compile Include="Assets\Scripts_XY\SaySystem\SaySystem.cs" />
     <Compile Include="Assets\Scripts_XY\PropIcon.cs" />
     <Compile Include="Assets\LoadMapButton.cs" />
+    <Compile Include="Assets\Scripts_XY\MusicController.cs" />
     <Compile Include="Assets\Scripts_XY\StartSceneController.cs" />
+    <Compile Include="Assets\MapPage.cs" />
     <Compile Include="Assets\Scripts_XY\SO\ChooseSO.cs" />
+    <Compile Include="Assets\PlotNextButton.cs" />
     <Compile Include="Assets\Scripts_XY\BackPage.cs" />
     <Compile Include="Assets\Scripts_XY\HideToShow.cs" />
     <Compile Include="Assets\Scripts_XY\Controller\PlotController.cs" />
+    <Compile Include="Assets\Scripts_XY\LocalData.cs" />
     <Compile Include="Assets\Scripts_XY\SO\PlotSO.cs" />
+    <Compile Include="Assets\PlayerIcon.cs" />
     <Compile Include="Assets\Scripts_XY\Controller\GameController2.cs" />
+    <Compile Include="Assets\EnterChangeSP.cs" />
     <Compile Include="Assets\Scripts_XY\CharactorIcon.cs" />
     <Compile Include="Assets\Scripts_XY\Controller\GameController.cs" />
+    <Compile Include="Assets\GameControllerSimpleEvent.cs" />
     <Compile Include="Assets\Scripts_XY\ToBlackPage.cs" />
+    <Compile Include="Assets\TouchSayButton.cs" />
     <Compile Include="Assets\Scripts_XY\BagPage.cs" />
     <Compile Include="Assets\Scripts_XY\StateIcon_Anim.cs" />
     <Compile Include="Assets\Scripts_XY\ChooseButton.cs" />
     <Compile Include="Assets\Scripts_XY\SaySystem\AutoButton.cs" />
     <Compile Include="Assets\Scripts_XY\TouchAction.cs" />
     <Compile Include="Assets\Scripts_XY\StateIcon.cs" />
+    <Compile Include="Assets\EventHandlerToGameController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
