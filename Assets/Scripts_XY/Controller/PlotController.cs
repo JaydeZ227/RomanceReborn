@@ -1,4 +1,4 @@
-ï»¿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -109,7 +109,7 @@ public class PlotController : MonoBehaviour
                 eventHandle.SendMassageToGameController(item);
             }
             /*
-            Debug.Log("Â²Â¥Â·Ã…Ã’Ã´ÃÂ§"+ plots[plotIndex].startClip);
+            Debug.Log("²¥·ÅÒôĞ§"+ plots[plotIndex].startClip);
             if (plots[plotIndex].startClip != null)
             {
                 
@@ -198,7 +198,7 @@ public class PlotController : MonoBehaviour
                 GameController2.Instance.bgIcon.SetState(plots[plotIndex].changeBgName);
             }
             /*
-            Debug.Log("Â²Â¥Â·Ã…Ã’Ã´ÃÂ§" + plots[plotIndex].startClip);
+            Debug.Log("²¥·ÅÒôĞ§" + plots[plotIndex].startClip);
             
             if (plots[plotIndex].startClip != null)
             {
@@ -460,10 +460,10 @@ public class PlotController : MonoBehaviour
 public class PlotSayItem : PlotItem
 {
     [TextArea(4, 10)]
-    public string sayContent;//è¯´è¯å†…å®¹
+    public string sayContent;//Ëµ»°ÄÚÈİ
     public FontStyle fontStyle = FontStyle.Normal;
-    public string changeBgName;//æ¢èƒŒæ™¯
-    public string charactorName;//äººç‰©åå­—
+    public string changeBgName;//±³¾°Í¼Æ¬Ãû×Ö
+    public string charactorName;//Ëµ»°½ÇÉ«Ãû×Ö
     public int nameSetType = 0;
     public string leftCharactorName = "";
     public string middleCharactorName = "";

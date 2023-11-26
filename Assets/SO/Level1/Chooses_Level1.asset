@@ -20,7 +20,7 @@ MonoBehaviour:
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
-        - methodName: AddHair_Up
+        - methodName: AddHair_Down
           parameter: 
           parameterType: 0
         - methodName: LoadNextSay
@@ -30,7 +30,7 @@ MonoBehaviour:
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
-        - methodName: AddHair_Down
+        - methodName: AddHair_Up
           parameter: 
           parameterType: 0
         - methodName: SetMaWeiOrGym
@@ -74,16 +74,16 @@ MonoBehaviour:
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
-        - methodName: LoadNextSay
-          parameter: Classroom_1_0
-          parameterType: 2
+        - methodName: ChooseInScrool
+          parameter: 
+          parameterType: 0
       - name: Scroll through phone
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
-        - methodName: ChooseInScrool
-          parameter: 
-          parameterType: 0
+        - methodName: LoadNextSay
+          parameter: Classroom_1_1
+          parameterType: 2
       - name: Read Romance story
         chooseUpdateProp: 
         chooseUpdateTip: 

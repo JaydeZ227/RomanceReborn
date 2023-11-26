@@ -23,7 +23,7 @@ MonoBehaviour:
       nameSetType: 1
       leftCharactorName: 
       middleCharactorName: 
-      rightCharactorName: Chaerin_wakeup
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -34,15 +34,9 @@ MonoBehaviour:
       nameSetType: 1
       leftCharactorName: 
       middleCharactorName: 
-      rightCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
-      jumpEndEvent:
-      - methodName: SetTip
-        parameter: update0
-        parameterType: 2
-      - methodName: SetCharatorToDic
-        parameter: Chaerin
-        parameterType: 2
+      jumpEndEvent: []
       touchNextEvent: []
     - sayContent: "Let\u2019s start with my flowing pink hair."
       fontStyle: 0
@@ -51,8 +45,14 @@ MonoBehaviour:
       nameSetType: 1
       leftCharactorName: 
       middleCharactorName: 
-      rightCharactorName: same_player
-      loadSayEvent: []
+      rightCharactorName: 
+      loadSayEvent:
+      - methodName: SetTip
+        parameter: update0
+        parameterType: 2
+      - methodName: SetCharatorToDic
+        parameter: Chaerin
+        parameterType: 2
       jumpEndEvent:
       - methodName: LoadNextChoose
         parameter: BedRoom_0
@@ -67,8 +67,8 @@ MonoBehaviour:
       charactorName: Chaerin
       nameSetType: 1
       leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: same_player
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent:
@@ -86,8 +86,8 @@ MonoBehaviour:
       charactorName: Chaerin
       nameSetType: 1
       leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: same_player
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent:
@@ -102,8 +102,8 @@ MonoBehaviour:
       charactorName: Chaerin
       nameSetType: 1
       leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: same_player
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent:
       - methodName: LoadNextChoose
@@ -119,8 +119,8 @@ MonoBehaviour:
       charactorName: Chaerin
       nameSetType: 1
       leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: same_player
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent:
@@ -139,8 +139,8 @@ MonoBehaviour:
       charactorName: Chaerin
       nameSetType: 1
       leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: same_player
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent:
@@ -159,13 +159,13 @@ MonoBehaviour:
       charactorName: Chaerin
       nameSetType: 1
       leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: same_player
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: Bus honk!!!
-      fontStyle: 0
+      fontStyle: 3
       changeBgName: BusStop
       charactorName: 
       nameSetType: 0
@@ -184,13 +184,7 @@ MonoBehaviour:
       middleCharactorName: 
       rightCharactorName: 
       loadSayEvent: []
-      jumpEndEvent:
-      - methodName: SetTip
-        parameter: update1
-        parameterType: 2
-      - methodName: SetCharatorToDic
-        parameter: Jeha
-        parameterType: 2
+      jumpEndEvent: []
       touchNextEvent: []
     - sayContent: '"Careful, Chaerin! You have to be more careful, what if you got
         hurt?"'
@@ -198,10 +192,16 @@ MonoBehaviour:
       changeBgName: BusStop
       charactorName: Jeha
       nameSetType: -1
-      leftCharactorName: Jeha_default
-      middleCharactorName: 
+      leftCharactorName: 
+      middleCharactorName: Jeha_default
       rightCharactorName: 
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: SetTip
+        parameter: update1
+        parameterType: 2
+      - methodName: SetCharatorToDic
+        parameter: Jeha
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: "\rJeha looks at you with concern."
@@ -231,7 +231,7 @@ MonoBehaviour:
       changeBgName: BusStop
       charactorName: Jeha
       nameSetType: -1
-      leftCharactorName: nan_normal
+      leftCharactorName: Jeha_default
       middleCharactorName: 
       rightCharactorName: same_player
       loadSayEvent: []
@@ -262,8 +262,8 @@ MonoBehaviour:
       - methodName: SetPropToBag
         parameter: first_note
         parameterType: 2
-      - methodName: SetPropToBag
-        parameter: first_note
+      - methodName: SetTip
+        parameter: update2
         parameterType: 2
       touchNextEvent: []
     - sayContent: '"Read it as soon as you get to class."'
@@ -282,9 +282,9 @@ MonoBehaviour:
       changeBgName: ClassRoom_morn
       charactorName: 
       nameSetType: 0
-      leftCharactorName: unknown_extra_2
-      middleCharactorName: 
-      rightCharactorName: unknown_extra_1
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -294,9 +294,9 @@ MonoBehaviour:
       changeBgName: ClassRoom_morn
       charactorName: 
       nameSetType: 0
-      leftCharactorName: unknown_extra_2
-      middleCharactorName: 
-      rightCharactorName: same_player
+      leftCharactorName: Jeha_default
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -317,8 +317,8 @@ MonoBehaviour:
       charactorName: Chaerin
       nameSetType: 1
       leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: same_player
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent:
       - methodName: LoadNextChoose
@@ -332,9 +332,9 @@ MonoBehaviour:
       changeBgName: ClassRoom_morn
       charactorName: 
       nameSetType: 0
-      leftCharactorName: unknown_extra_2
-      middleCharactorName: 
-      rightCharactorName: unknown_extra_1
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -343,9 +343,9 @@ MonoBehaviour:
       changeBgName: ClassRoom_morn
       charactorName: Classmate
       nameSetType: 1
-      leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: unknown_extra_1
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -355,7 +355,21 @@ MonoBehaviour:
       changeBgName: ClassRoom_morn
       charactorName: Classmate
       nameSetType: -1
-      leftCharactorName: unknown_extra_2
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent:
+      - methodName: LoadNextSay
+        parameter: MusicRoom_0
+        parameterType: 2
+    - sayContent: Time passes to noon.
+      fontStyle: 0
+      changeBgName: ClassRoom_morn
+      charactorName: 
+      nameSetType: 0
+      leftCharactorName: 
       middleCharactorName: 
       rightCharactorName: 
       loadSayEvent: []
@@ -371,9 +385,9 @@ MonoBehaviour:
       changeBgName: ClassRoom_morn
       charactorName: Classmate
       nameSetType: 1
-      leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: unknown_extra_1
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -382,9 +396,9 @@ MonoBehaviour:
       changeBgName: ClassRoom_morn
       charactorName: Classmate
       nameSetType: -1
-      leftCharactorName: unknown_extra_2
-      middleCharactorName: 
-      rightCharactorName: 
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -409,7 +423,7 @@ MonoBehaviour:
       changeBgName: ClassRoom_morn
       charactorName: Teacher
       nameSetType: 0
-      leftCharactorName: unknown_extra_2
+      leftCharactorName: unknown_extra
       middleCharactorName: 
       rightCharactorName: 
       loadSayEvent: []
@@ -420,7 +434,7 @@ MonoBehaviour:
       changeBgName: ClassRoom_morn
       charactorName: 
       nameSetType: 0
-      leftCharactorName: unknown_extra_2
+      leftCharactorName: unknown_extra
       middleCharactorName: 
       rightCharactorName: 
       loadSayEvent: []
@@ -483,8 +497,8 @@ MonoBehaviour:
     - sayContent: This is it! Our first kiss!
       fontStyle: 0
       changeBgName: MusicRoom
-      charactorName: 
-      nameSetType: 0
+      charactorName: Chaerin
+      nameSetType: 1
       leftCharactorName: 
       middleCharactorName: 
       rightCharactorName: same_player
@@ -518,7 +532,7 @@ MonoBehaviour:
       changeBgName: MusicRoom
       charactorName: Chaerin
       nameSetType: 1
-      leftCharactorName: Jeha_transition_2
+      leftCharactorName: Jeha_transition
       middleCharactorName: 
       rightCharactorName: same_player
       loadSayEvent: []

@@ -8,7 +8,7 @@ public class StartSceneController : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("GameScene1");
     }
     public void QuitGame()
     {

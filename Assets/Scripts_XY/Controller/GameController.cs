@@ -247,8 +247,8 @@ public class GameController : MonoBehaviour
     }
 
 
-    public string chooseEnterSayByGymOrMaWei = "Classroom_1_0";
-    public string chooseEnterSayByNoGymOrMaWei = "Classroom_1_0_1";
+    public string chooseEnterSayByGymOrMaWei = "Classroom_1_0_1";
+    public string chooseEnterSayByNoGymOrMaWei = "Classroom_1_0";
     public void SetMaWeiOrGym()
     {
         isMaWeiOrGym = true;
@@ -275,9 +275,10 @@ public class GameController : MonoBehaviour
         Bag1.SetActive(true);
     }
 
-
+    public AudioClip audioClip;
     private void Start()
     {
+        MusicController.Instance.PlayEffectByFrame(audioClip);
         GameState = GameStateEnum.Black;
         leftPlayer.SetState("");
         middlePlayer.SetState("");
@@ -313,7 +314,5 @@ public class GameController : MonoBehaviour
                 break;
         }
     }
-
-    //
 
 }
