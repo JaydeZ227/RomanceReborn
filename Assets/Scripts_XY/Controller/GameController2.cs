@@ -225,7 +225,7 @@ public class GameController2 : MonoBehaviour
         return isCanEnter;
     }
 
-    #region 时间
+    #region Timer
     public Text timeText;
     public float curTime = 6 * 60 * 60;
     public void AddTime(int s)
@@ -250,7 +250,7 @@ public class GameController2 : MonoBehaviour
 
 
     #endregion
-    #region 地图跳转
+    #region MusicRoom
     public string mapToMusicRoom_Plot = "MusicRoom0";
 
     public MapPage map;
@@ -331,7 +331,7 @@ public class GameController2 : MonoBehaviour
         PlotController.Instance.say.gameObject.SetActive(false);
     }
     #endregion
-    #region 巴士
+    #region BusZombie
     public string bsNextSay = "BusStop1";
     public string bsCharactorAllName = "zombie";
     public string bsBgName = "OnTheBus";
@@ -362,7 +362,7 @@ public class GameController2 : MonoBehaviour
         isDieToBus = true;
     }
     #endregion
-    #region 第一个场景 黑屏闹钟
+    #region BedZombie
 
     public string bedendNextSay = "3_2_1";
     public string bedendCharactorAllName = "zombie";
@@ -508,7 +508,7 @@ public class GameController2 : MonoBehaviour
 
     }
     #endregion
-    #region 医护办公室
+    #region HuShi
 
     public bool isEnterHuShi = false;
     public void setEnterHuShi()
@@ -521,7 +521,7 @@ public class GameController2 : MonoBehaviour
 
 
     #endregion
-    #region 教室
+    #region Classroom
     public bool isEnterJiaoshi = false;
     public void SetEnterJiaoShi()
     {
@@ -548,7 +548,7 @@ public class GameController2 : MonoBehaviour
     }
 
     #endregion
-    #region Library 图书馆
+    #region Library
     public string stairsSceneStart = "";
     public string LibrarySceneStart = "Library0";
     public string GetChooseLibrary_noChicken = "Library1_State1";
@@ -575,10 +575,10 @@ public class GameController2 : MonoBehaviour
         PlotController.Instance.SetSay(PlotSO.GetPlot(Library2_0_0Next).plots);
     }
     #endregion
-    #region Shop2ndFloor 商店;
+    #region Shop2ndFloor
     public string Stop2ndFloorStart = "Shop2ndFloor0";
     #endregion
-    #region OverScene 结束场景
+    #region OverScene
     public string OverSceneStart = "Alpathy12Scene0";
     public string OverSceneEndSay = "Apathy12Scene1";
     public GameObject resetButton;
@@ -654,11 +654,11 @@ public class GameController2 : MonoBehaviour
                     {
                         map.SetPosName("SchoolGate");
                         SetTime(7 * 60 * 60);
-                        Debug.Log("进入学校门口");
+                        Debug.Log("SchoolGate");
                         CloseSayBar();
                         bgIcon.SetState(SchoolGate_morn_BgStr);
                         leftPlayer.SetState("");
-                        middlePlayer.SetState(GetJehaNameByApathyNum("Jeha_transition"));
+                        middlePlayer.SetState(GetJehaNameByApathyNum("Jeha_default"));
                         rightPlayer.SetState("");
                         PlotController.Instance.say.gameObject.SetActive(false);
                         ApathyShow.SetActive(true);
@@ -800,6 +800,9 @@ public class GameController2 : MonoBehaviour
     }
     private void Awake()
     {
+        //can't touch map
+        mapButton.isCanTouch = false;
+
        var t= GameController2.Instance;
         //初始化数据
         //bagItemNameList = new List<string>(LocalData.levelBagStr);
@@ -864,6 +867,14 @@ public class GameController2 : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    //hide iphone
+    public ChangeSPButton mapButton;
+    //display
+    public void CanTouchMap()
+    {
+        mapButton.isCanTouch = true;
     }
 
 }

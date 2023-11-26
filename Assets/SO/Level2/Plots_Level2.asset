@@ -48,7 +48,7 @@ MonoBehaviour:
       nameSetType: 1
       leftCharactorName: 
       middleCharactorName: 
-      rightCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -62,10 +62,10 @@ MonoBehaviour:
       rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent:
-      - methodName: SetPropToBag
+      - methodName: SetTip
         parameter: bracelet
         parameterType: 2
-      - methodName: SetTip
+      - methodName: SetPropToBag
         parameter: bracelet
         parameterType: 2
       touchNextEvent:
@@ -89,13 +89,14 @@ MonoBehaviour:
       - methodName: ChangeApathyNum
         parameter: 2
         parameterType: 1
+      - methodName: 
+        parameter: 
+        parameterType: 0
       jumpEndEvent: []
       touchNextEvent:
       - methodName: ShowBedZombie
         parameter: 
         parameterType: 0
-  - plotName: 3_2_1
-    plots:
     - sayContent: "\u201CAHHHHH!!!\u201D"
       fontStyle: 0
       changeBgName: BedRoom_night
@@ -139,7 +140,7 @@ MonoBehaviour:
       nameSetType: 1
       leftCharactorName: 
       middleCharactorName: 
-      rightCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent:
       - methodName: SetTime
         parameter: 21900
@@ -158,8 +159,8 @@ MonoBehaviour:
       charactorName: Chaerin
       nameSetType: -2
       leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: same_player
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent:
       - methodName: SetTime
         parameter: 22500
@@ -173,7 +174,7 @@ MonoBehaviour:
     plots:
     - sayContent: Who cares what I wear anymore?
       fontStyle: 0
-      changeBgName: BedRoom
+      changeBgName: BedRoom_morn
       charactorName: Chaerin
       nameSetType: 1
       leftCharactorName: 
@@ -239,7 +240,10 @@ MonoBehaviour:
       leftCharactorName: Jeha_default
       middleCharactorName: 
       rightCharactorName: 
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: SetTime
+        parameter: 25200
+        parameterType: 1
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: "\u201CGood morning, Jeha!\u201D"
@@ -262,7 +266,10 @@ MonoBehaviour:
       leftCharactorName: Jeha_default
       middleCharactorName: 
       rightCharactorName: same_player
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: CanTouchMap
+        parameter: 
+        parameterType: 0
       jumpEndEvent: []
       touchNextEvent: []
   - plotName: NurseOffice1_0
@@ -297,7 +304,10 @@ MonoBehaviour:
       middleCharactorName: same_player
       rightCharactorName: 
       loadSayEvent: []
-      jumpEndEvent: []
+      jumpEndEvent:
+      - methodName: SetTip
+        parameter: "Nurse\u2019s note"
+        parameterType: 2
       touchNextEvent: []
     - sayContent: Chaerin swallows note.
       fontStyle: 2
@@ -338,7 +348,7 @@ MonoBehaviour:
         parameterType: 2
   - plotName: Choose_NurseOffice0
     plots:
-    - sayContent: "Chaerin goes to leave but the door is locked. \uFF08\u64AD\u653E\u97F3\u6548\uFF1ADoorLock\uFF09"
+    - sayContent: 'Chaerin goes to leave but the door is locked. '
       fontStyle: 0
       changeBgName: NurseOffice_morn
       charactorName: Chaerin
@@ -373,9 +383,9 @@ MonoBehaviour:
       changeBgName: NurseOffice_morn
       charactorName: Classmate
       nameSetType: -2
-      leftCharactorName: 
+      leftCharactorName: unknown_extra
       middleCharactorName: unknown_extra
-      rightCharactorName: 
+      rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -396,9 +406,9 @@ MonoBehaviour:
       changeBgName: NurseOffice_night
       charactorName: Chaerin
       nameSetType: -2
-      leftCharactorName: unknown_extra_1
-      middleCharactorName: 
-      rightCharactorName: same_player
+      leftCharactorName: 
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent:
       - methodName: SetTime
         parameter: 86400
@@ -430,7 +440,7 @@ MonoBehaviour:
       charactorName: Classmate
       nameSetType: 1
       leftCharactorName: unknown_extra
-      middleCharactorName: 
+      middleCharactorName: unknown_extra
       rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent: []
@@ -441,7 +451,7 @@ MonoBehaviour:
       charactorName: Classmate
       nameSetType: -1
       leftCharactorName: unknown_extra
-      middleCharactorName: 
+      middleCharactorName: unknown_extra
       rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent:
@@ -452,11 +462,11 @@ MonoBehaviour:
     - sayContent: 'Chaerin dies, classmates lock her in with infected students. '
       fontStyle: 0
       changeBgName: NurseOffice_night
-      charactorName: 
-      nameSetType: 0
-      leftCharactorName: unknown_extra
-      middleCharactorName: unknown_extra
-      rightCharactorName: unknown_extra
+      charactorName: Zombies
+      nameSetType: -2
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
       loadSayEvent:
       - methodName: SetTime
         parameter: 86400
@@ -471,11 +481,11 @@ MonoBehaviour:
     - sayContent: 'Chaerin dies, classmates lock her in with infected students. '
       fontStyle: 0
       changeBgName: NurseOffice_night
-      charactorName: 
-      nameSetType: 0
-      leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: 
+      charactorName: Zombies
+      nameSetType: -2
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
       loadSayEvent:
       - methodName: SetTime
         parameter: 86400
@@ -609,10 +619,10 @@ MonoBehaviour:
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: Chaerin
-      nameSetType: 1
-      leftCharactorName: Jeha_transition
-      middleCharactorName: 
-      rightCharactorName: same_player
+      nameSetType: -2
+      leftCharactorName: 
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -620,29 +630,29 @@ MonoBehaviour:
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: Chaerin
-      nameSetType: 0
-      leftCharactorName: Jeha_transition
-      middleCharactorName: 
-      rightCharactorName: same_player
+      nameSetType: -2
+      leftCharactorName: 
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: The room is empty. You feel arms around wrap around you.
       fontStyle: 0
       changeBgName: MusicRoom
-      charactorName: Jeha_transition
-      nameSetType: 1
-      leftCharactorName: Jeha_transition
-      middleCharactorName: 
-      rightCharactorName: same_player
+      charactorName: 
+      nameSetType: 0
+      leftCharactorName: 
+      middleCharactorName: same_player
+      rightCharactorName: 
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: "\u201CJeha! I read your no \u2013\u201D"
       fontStyle: 0
       changeBgName: MusicRoom
-      charactorName: Jeha_transition
-      nameSetType: -1
+      charactorName: Chaerin
+      nameSetType: 1
       leftCharactorName: Jeha_transition
       middleCharactorName: 
       rightCharactorName: same_player
@@ -652,8 +662,8 @@ MonoBehaviour:
     - sayContent: "\u201CARGHHH\u201D"
       fontStyle: 0
       changeBgName: MusicRoom
-      charactorName: Jeha_zombie
-      nameSetType: 0
+      charactorName: Jeha
+      nameSetType: -1
       leftCharactorName: Jeha_zombie
       middleCharactorName: 
       rightCharactorName: same_player
@@ -664,7 +674,7 @@ MonoBehaviour:
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: Chaerin
-      nameSetType: 0
+      nameSetType: 1
       leftCharactorName: Jeha_zombie
       middleCharactorName: 
       rightCharactorName: same_player

@@ -98,6 +98,9 @@ MonoBehaviour:
         - methodName: ShowBSZombie
           parameter: 
           parameterType: 0
+        - methodName: LoadNextSay
+          parameter: BusStop1
+          parameterType: 2
       - name: Walk to school and See Jeha
         chooseUpdateProp: 
         chooseUpdateTip: 

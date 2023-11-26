@@ -7,9 +7,14 @@ using UnityEngine.UI;
 
 public class ChangeSPButton : MonoBehaviour,IPointerExitHandler,IPointerEnterHandler,IPointerClickHandler
 {
+    public bool isCanTouch = true;
     public UnityEvent touchEvent;
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (!isCanTouch)
+        {
+            return;
+        }
         touchEvent?.Invoke();
     }
     public Sprite enterSP;
