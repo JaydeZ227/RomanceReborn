@@ -154,7 +154,7 @@ MonoBehaviour:
         chooseUpdateTip: bat
         chooseTargetEvent:
         - methodName: AddTime
-          parameter: 1
+          parameter: 3600
           parameterType: 0
         - methodName: SetTip
           parameter: bat
@@ -167,7 +167,7 @@ MonoBehaviour:
         chooseUpdateTip: 
         chooseTargetEvent:
         - methodName: AddTime
-          parameter: 1
+          parameter: 3600
           parameterType: 0
         - methodName: LoadNextSay
           parameter: Gmy2_1

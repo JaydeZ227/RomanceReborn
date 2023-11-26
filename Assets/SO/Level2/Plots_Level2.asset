@@ -524,7 +524,7 @@ MonoBehaviour:
       rightCharactorName: 
       loadSayEvent:
       - methodName: AddTime
-        parameter: 1
+        parameter: 3600
         parameterType: 1
       jumpEndEvent:
       - methodName: LoadNextChoose
@@ -536,11 +536,11 @@ MonoBehaviour:
     - sayContent: 'Se-eun Ham is in the library. '
       fontStyle: 0
       changeBgName: GymClean
-      charactorName: 
-      nameSetType: 0
+      charactorName: Classmate
+      nameSetType: -1
       leftCharactorName: unknown_extra
       middleCharactorName: 
-      rightCharactorName: 
+      rightCharactorName: same_player
       loadSayEvent: []
       jumpEndEvent:
       - methodName: SetCharatorToDic
@@ -552,16 +552,10 @@ MonoBehaviour:
       - methodName: SetTip
         parameter: "Se-Eun\u2019supdate"
         parameterType: 2
-      - methodName: JudgeGymByJumpEnd
-        parameter: 
-        parameterType: 0
       touchNextEvent:
       - methodName: ChangeApathyNum
         parameter: -1
         parameterType: 1
-      - methodName: JudgeGymEnterToNext
-        parameter: 
-        parameterType: 0
   - plotName: Gmy2_1_1
     plots:
     - sayContent: Ask Se-eun about her bracelet.
@@ -569,7 +563,7 @@ MonoBehaviour:
       changeBgName: GymClean
       charactorName: Chaerin
       nameSetType: -2
-      leftCharactorName: 
+      leftCharactorName: unknown_extra
       middleCharactorName: 
       rightCharactorName: same_player
       loadSayEvent: []

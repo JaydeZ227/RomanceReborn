@@ -206,7 +206,10 @@ public class GameController2 : MonoBehaviour
                 break;
             case "Shop2ndFloor":
                 {
-                    isCanEnter = true;
+                    if (!isLockStair)
+                    {
+                        isCanEnter = true;
+                    }
                 }
                 break;
             case "SchoolGate":
