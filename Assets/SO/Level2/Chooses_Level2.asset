@@ -272,7 +272,7 @@ MonoBehaviour:
         chooseUpdateTip: 
         chooseTargetEvent:
         - methodName: AddTime
-          parameter: 6
+          parameter: 21600
           parameterType: 1
         - methodName: ChangeApathyNum
           parameter: -1
@@ -285,7 +285,7 @@ MonoBehaviour:
         chooseUpdateTip: 
         chooseTargetEvent:
         - methodName: AddTime
-          parameter: 6
+          parameter: 21600
           parameterType: 1
         - methodName: ChangeApathyNum
           parameter: 2
@@ -298,7 +298,7 @@ MonoBehaviour:
         chooseUpdateTip: 
         chooseTargetEvent:
         - methodName: AddTime
-          parameter: 6
+          parameter: 21600
           parameterType: 1
         - methodName: LoadNextSay
           parameter: Classroom2_2
@@ -312,7 +312,7 @@ MonoBehaviour:
         chooseUpdateTip: 
         chooseTargetEvent:
         - methodName: AddTime
-          parameter: 6
+          parameter: 21600
           parameterType: 1
         - methodName: ChangeApathyNum
           parameter: -1
@@ -325,7 +325,7 @@ MonoBehaviour:
         chooseUpdateTip: 
         chooseTargetEvent:
         - methodName: AddTime
-          parameter: 6
+          parameter: 21600
           parameterType: 1
         - methodName: ChangeApathyNum
           parameter: 2
@@ -338,7 +338,7 @@ MonoBehaviour:
         chooseUpdateTip: 
         chooseTargetEvent:
         - methodName: AddTime
-          parameter: 6
+          parameter: 21600
           parameterType: 1
         - methodName: LoadNextSay
           parameter: Classroom2_2
@@ -354,7 +354,7 @@ MonoBehaviour:
   - chooseName: ClassChoose3
     choose:
       chooseItem:
-      - name: " \u201CDon\u2019t do it for me, do it for them.\u201D (Apathy - 2)"
+      - name: " \u201CDon\u2019t do it for me, do it for them.\u201D"
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
@@ -364,7 +364,7 @@ MonoBehaviour:
         - methodName: LoadNextSay
           parameter: Classroom3_1
           parameterType: 2
-      - name: " \u201CYou\u2019re my only option.\u201D (Apathy +1)"
+      - name: " \u201CYou\u2019re my only option.\u201D"
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:

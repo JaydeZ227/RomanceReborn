@@ -168,21 +168,24 @@ public class GameController2 : MonoBehaviour
                             isCanEnter = true;
                         }
                     }
-                    else if (classEnterCount == 1)
+                    else if (classEnterCount >= 1)
                     {
-                        if (curTime <= 7 * 60 * 60)
-                        {
-                            isCanEnter = true;
-                        }
-                    }
-                    else if(classEnterCount>1)
-                    {
-                        Debug.Log("ÅÐ¶ÏµÚÈý´Î");
                         if (!isLockClass2)
                         {
-                            isCanEnter =true;
+                            isCanEnter = true;
+
                         }
+                        else 
+                        {
+
+                            if (curTime <= 7 * 60 * 60)
+                            {
+                                isCanEnter = true;
+                            }
+                        }
+
                     }
+                   
                 }
                 break;
             case "Library":
@@ -389,7 +392,7 @@ public class GameController2 : MonoBehaviour
         yield return new WaitForSeconds(5f);
         // PlotController.Instance.say.gameObject.SetActive(true);
         PlotController.Instance.SetSay(PlotSO.GetPlot(bedendNextSay).plots);
-        DieToBus();
+        //DieToBus();
     }
 
     public BackPage backPage;
@@ -713,16 +716,21 @@ public class GameController2 : MonoBehaviour
                             PlotController.Instance.SetSay(PlotSO.GetPlot(mapToClassroom_Plot_Count1).plots);
                             AddTime(5*60*60);
                         }
-                        else if (classEnterCount == 1)
+                        else if (classEnterCount >= 1)
                         {
-                            PlotController.Instance.SetSay(PlotSO.GetPlot(mapToClassroom_Plot_Count2).plots);
-                            AddTime(5 * 60 * 60);
-                        }
-                        else if (classEnterCount >1)
-                        {
+                            if (!isLockClass2)
+                            {
+                                PlotController.Instance.SetSay(PlotSO.GetPlot(mapToClassroom_Plot_Count2).plots);
+                                AddTime(5 * 60 * 60);
+                            }
+                            else 
+                            {
+                                PlotController.Instance.SetSay(PlotSO.GetPlot(mapToClassroom_Plot_Count3).plots);
+                            }
 
-                            PlotController.Instance.SetSay(PlotSO.GetPlot(mapToClassroom_Plot_Count3).plots);
+                            
                         }
+                        
                         classEnterCount++;
                         SetEnterJiaoShi();
                     }
