@@ -3487,7 +3487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42, y: -455.96}
+  m_AnchoredPosition: {x: 42, y: -432.34998}
   m_SizeDelta: {x: 216, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1938776149153316135
@@ -7709,7 +7709,7 @@ RectTransform:
   m_Father: {fileID: 3380049520518817499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.63786983}
-  m_AnchorMax: {x: 1, y: 0.99999994}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8421,8 +8421,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: -105}
-  m_SizeDelta: {x: 31.22, y: 31.22}
+  m_AnchoredPosition: {x: -0.000016212, y: -0.0000047684}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9153774266863206599
 CanvasRenderer:
@@ -8445,14 +8445,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f95ffae44790b9842aeccf796c361071, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14445,7 +14445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1191, y: 434.99997}
+  m_AnchoredPosition: {x: 1194, y: 434.99997}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7927416051452446535
@@ -16268,7 +16268,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -160.53, y: 544.85}
-  m_SizeDelta: {x: 321.05, y: 1089.73}
+  m_SizeDelta: {x: 321.05, y: 1089.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6030651583691514750
 CanvasRenderer:
@@ -16776,8 +16776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2325.7, y: 568.48}
-  m_SizeDelta: {x: 412.68, y: 1136.92}
+  m_AnchoredPosition: {x: 2325.7, y: 544.87}
+  m_SizeDelta: {x: 412.68, y: 1089.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3000745777752931514
 CanvasRenderer:
@@ -16799,7 +16799,7 @@ GameObject:
   - component: {fileID: 5193847387320280699}
   - component: {fileID: 4666030763378657174}
   m_Layer: 5
-  m_Name: NewTip_Bag
+  m_Name: NewTip_Phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16821,8 +16821,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58.999878, y: -365.99997}
-  m_SizeDelta: {x: 31.22, y: 31.22}
+  m_AnchoredPosition: {x: 0.0007019, y: 0.00020981}
+  m_SizeDelta: {x: 299.89, y: 299.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5193847387320280699
 CanvasRenderer:
@@ -16845,14 +16845,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 43d702c12c6871e43ac959d9b7a6637a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18321,8 +18321,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.41, y: 138.35}
-  m_SizeDelta: {x: 398.92, y: 917.98}
+  m_AnchoredPosition: {x: 26.89, y: 138.35}
+  m_SizeDelta: {x: 421.87, y: 917.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6396126804239365651
 CanvasRenderer:
