@@ -277,7 +277,7 @@ MonoBehaviour:
       charactorName: Chaerin
       nameSetType: -2
       leftCharactorName: 
-      middleCharactorName: same_player
+      middleCharactorName: 
       rightCharactorName: 
       loadSayEvent:
       - methodName: SetTime
@@ -1147,7 +1147,7 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: Classroom1_1
     plots:
-    - sayContent: 
+    - sayContent: No time to waste!
       fontStyle: 0
       changeBgName: ClassRoom_morn
       charactorName: Chaerin
