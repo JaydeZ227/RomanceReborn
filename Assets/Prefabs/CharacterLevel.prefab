@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7, y: -7.5, z: 0}
-  m_LocalScale: {x: 1.8282219, y: 1.8282219, z: 1.8282219}
+  m_LocalScale: {x: 1.828222, y: 1.8282219, z: 1.8282219}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 94549577505625888}
@@ -128,8 +128,8 @@ Transform:
   m_GameObject: {fileID: 1803766791708100580}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1, y: -3.5, z: 0}
-  m_LocalScale: {x: 2.396274, y: 2.396274, z: 2.396274}
+  m_LocalPosition: {x: -3.2, y: -5.2, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 94549577505625888}
@@ -1750,7 +1750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4445595650073806171
 Transform:
   m_ObjectHideFlags: 0
@@ -1761,7 +1761,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15.33, y: -1.52, z: 0}
-  m_LocalScale: {x: 2.08112, y: 2.08112, z: 2.08112}
+  m_LocalScale: {x: 1.828222, y: 1.828222, z: 1.828222}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 94549577505625888}
@@ -2064,7 +2064,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.82, y: -0.12, z: 0}
-  m_LocalScale: {x: 2.0270505, y: 2.0270505, z: 2.0270505}
+  m_LocalScale: {x: 1.828222, y: 1.828222, z: 1.828222}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 94549577505625888}
@@ -2367,7 +2367,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.9, y: -8, z: 0}
-  m_LocalScale: {x: 2.396274, y: 2.396274, z: 2.396274}
+  m_LocalScale: {x: 1.828222, y: 1.828222, z: 1.828222}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 94549577505625888}
