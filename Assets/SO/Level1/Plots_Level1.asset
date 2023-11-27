@@ -152,8 +152,8 @@ MonoBehaviour:
         parameterType: 0
   - plotName: BusStop_1
     plots:
-    - sayContent: 'If I cross the street now, Jeha will save me from the bus hitting
-        me, just like in the story. '
+    - sayContent: 'There''s a bus coming. According to the story, if I cross the
+        street now, Jeha will save me from getting hit. '
       fontStyle: 0
       changeBgName: BusStop
       charactorName: Chaerin
@@ -164,7 +164,8 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: Bus honk!!!
+    - sayContent: I need to do this so he will confess to me in the music room today
+        at noon!
       fontStyle: 3
       changeBgName: BusStop
       charactorName: 
@@ -172,10 +173,14 @@ MonoBehaviour:
       leftCharactorName: 
       middleCharactorName: 
       rightCharactorName: 
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: BusHonk
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: 'Jeha pulls you out of the way and into his arms. '
+    - sayContent: Just as predicted, Jeha pulls me out of the way and into his arms.
+        I have to hide my smile.
       fontStyle: 0
       changeBgName: BusStop
       charactorName: 
