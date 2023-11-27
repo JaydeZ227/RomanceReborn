@@ -15,7 +15,7 @@ MonoBehaviour:
   plotMessages:
   - plotName: BedRoom1
     plots:
-    - sayContent: GASP Sound
+    - sayContent: '!!! '
       fontStyle: 3
       changeBgName: BedRoom_morn
       charactorName: 
@@ -27,10 +27,15 @@ MonoBehaviour:
       - methodName: SetTime
         parameter: 21600
         parameterType: 1
+      - methodName: LoadMusic
+        parameter: Gasp
+        parameterType: 2
+      - methodName: LoadMusic
+        parameter: Gasp
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CShe saved my life! But then she \u2014 I have to find out
-        who she was.\u201D"
+    - sayContent: 'I was going to let the zombies get me but then that girl.. '
       fontStyle: 0
       changeBgName: BedRoom_morn
       charactorName: Chaerin
@@ -41,7 +46,8 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CAnd who killed her.\u201D"
+    - sayContent: "\u201CThat girl... She saved my life! But then she \u2014 !\"
+        I can't even say the words out loud."
       fontStyle: 0
       changeBgName: BedRoom_morn
       charactorName: Chaerin
@@ -52,7 +58,115 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CMy only clue this bracelet.\u201D"
+    - sayContent: 'She said she''s in my class. Outside of that, the only clue I
+        have are this bracelet she dropped. '
+      fontStyle: 0
+      changeBgName: BedRoom_morn
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'Maybe if I ask around the school before noon hits, I can figure
+        out where she is in time to save her. And myself. '
+      fontStyle: 0
+      changeBgName: BedRoom_morn
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'It won''t be easy though. There are zombies everywhere. I could
+        die. '
+      fontStyle: 0
+      changeBgName: BedRoom_morn
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: A lot.
+      fontStyle: 0
+      changeBgName: BedRoom_morn
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'And already I was so close to giving up and letting the zombies
+        eat me. I have to be careful not to die too much. '
+      fontStyle: 0
+      changeBgName: BedRoom_morn
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'Just because I''m reborn every day, doesn''t mean I''m invincible.
+        Like when Jeha started becoming a shadow person. '
+      fontStyle: 0
+      changeBgName: BedRoom_morn
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: If I'm not careful, I'll never find the girl with the bracelet
+        and Jeha will become just like everyone else.
+      fontStyle: 0
+      changeBgName: BedRoom_morn
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'I don''t think I could keep living if I''m the only person who
+        has a face and a name in the zombie apocalypse. '
+      fontStyle: 0
+      changeBgName: BedRoom_morn
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'That sounds too lonely. I would be better off giving up on people
+        altogether. '
+      fontStyle: 0
+      changeBgName: BedRoom_morn
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: But that hasn't happened yet! Jeha still looks normal and that
+        girl is out there waiting for me to save her!
       fontStyle: 0
       changeBgName: BedRoom_morn
       charactorName: Chaerin
@@ -74,7 +188,8 @@ MonoBehaviour:
         parameterType: 2
   - plotName: 3_1
     plots:
-    - sayContent: "\"After what happened yesterday, I\u2019m scared to go to school.\""
+    - sayContent: "But after what happened yesterday, I\u2019m scared to go to school.
+        Something changed so maybe if I stay home I'll survive now?"
       fontStyle: 0
       changeBgName: BedRoom_morn
       charactorName: Chaerin
@@ -89,9 +204,12 @@ MonoBehaviour:
       - methodName: ChangeApathyNum
         parameter: 2
         parameterType: 1
-      - methodName: 
-        parameter: 
-        parameterType: 0
+      - methodName: LoadMusic
+        parameter: ZombieSoundShort
+        parameterType: 2
+      - methodName: LoadMusic
+        parameter: GlassBreak
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent:
       - methodName: ShowBedZombie
@@ -133,7 +251,7 @@ MonoBehaviour:
   - plotName: Choose_BedRoom1
     plots:
     - sayContent: "\u201CThere\u2019s no time to waste, that girl is in my class
-        somewhere. I should get ready.\u201D"
+        and she died saving me. I need to get ready.\u201D"
       fontStyle: 0
       changeBgName: BedRoom_morn
       charactorName: Chaerin
@@ -207,15 +325,21 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: BusStop1
     plots:
-    - sayContent: "\u201CARGHHH\u201D"
+    - sayContent: "\u201CRRAARGHHH\u201D"
       fontStyle: 0
       changeBgName: OnTheBus
-      charactorName: zombie
+      charactorName: Zombies
       nameSetType: -2
       leftCharactorName: zombie
       middleCharactorName: zombie
       rightCharactorName: zombie
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieSoundShort
+        parameterType: 2
+      - methodName: LoadMusic
+        parameter: ZombieBite
+        parameterType: 2
       jumpEndEvent:
       - methodName: SetTip
         parameter: clue_note
@@ -232,7 +356,8 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: SchoolGate0
     plots:
-    - sayContent: "\u201CGood morning, Chaerin!\u201D"
+    - sayContent: "\u201CGood morning, Chaerin! I didn't see you on the way to school
+        today.\u201D"
       fontStyle: 0
       changeBgName: SchoolGate_morn
       charactorName: Jeha
@@ -257,13 +382,36 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: Now, please open your phone, click the Map, and select the room
-        you want to go to.
+    - sayContent: Sorry, Jeha but I have to go find that girl with the bracelet.
       fontStyle: 0
       changeBgName: SchoolGate_morn
-      charactorName: Jeha
+      charactorName: 
       nameSetType: -1
       leftCharactorName: Jeha_default
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'After dying so many times, I made a map of the school on my pink
+        phone. '
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: Jeha_default
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'The school is pretty big and now I''ve figured out exactly where
+        and when the zombies show up. '
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
       middleCharactorName: 
       rightCharactorName: same_player
       loadSayEvent:
@@ -272,10 +420,131 @@ MonoBehaviour:
         parameterType: 0
       jumpEndEvent: []
       touchNextEvent: []
+    - sayContent: 'I started taking notes of everyone on my phone too. '
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'Just like my bag, anything I put on my phone stays there even
+        if I die and wake up on this same day again. '
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'This is a big school and people don''t exactly like me. Investigating
+        locations and talking to people while avoiding zombies will take time. '
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: And I die every day at noon.
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'There''s no way I can figure it all out in one day. But the good
+        thing is I''ll be reborn again on this same morning and get a second, third,
+        fifth chance. '
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'My good luck won''t last forever though, and the zombies get worse
+        throughout the day. So I have to be careful where I go and who I talk to. '
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'If there''s nowhere else for me to go, I can try again by dying.
+        I know for a fact that Jeha will be a zombie in the music room. If I''m going
+        to die at noon no matter what, might as well die in front of a familiar face. '
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'My pink phone will update with places that are too zombie infested. '
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'If I want to go anywhere around school, I need to use the map
+        on my phone first and make sure there''s no zombies. '
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent:
+      - methodName: CanTouchMap
+        parameter: 
+        parameterType: 0
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: Okay! Time to check my phone and figure out where to go!
+      fontStyle: 0
+      changeBgName: SchoolGate_morn
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
   - plotName: NurseOffice1_0
     plots:
-    - sayContent: "\u201CI\u2019ll could die if I go here, but there could be the
-        biggest clue here.\u201D"
+    - sayContent: 'I could die if I go here, but there could be the biggest clues
+        here. '
       fontStyle: 0
       changeBgName: NurseOffice_morn
       charactorName: Chaerin
@@ -297,8 +566,8 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: NurseOffice1_1
     plots:
-    - sayContent: "This could help save someone that isn\u2019t reborn every day
-        like me."
+    - sayContent: I don't need this since I'll just wake up the next day, but this
+        could help save someone else if they get hurt. Like that mystery girl.
       fontStyle: 0
       changeBgName: NurseOffice_morn
       charactorName: Chaerin
@@ -315,15 +584,19 @@ MonoBehaviour:
         parameter: "Nurse\u2019s note"
         parameterType: 2
       touchNextEvent: []
-    - sayContent: Chaerin swallows note.
-      fontStyle: 2
+    - sayContent: 'If I swallow the note, I''ll wake up with it in the morning in
+        my bag. '
+      fontStyle: 0
       changeBgName: NurseOffice_morn
       charactorName: Chaerin
       nameSetType: -2
       leftCharactorName: 
       middleCharactorName: same_player
       rightCharactorName: 
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ItemEquip
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: Time to get out of here.
@@ -357,7 +630,7 @@ MonoBehaviour:
         parameterType: 2
   - plotName: Choose_NurseOffice0
     plots:
-    - sayContent: 'Chaerin goes to leave but the door is locked. '
+    - sayContent: Oh crap! The door is locked!
       fontStyle: 0
       changeBgName: NurseOffice_morn
       charactorName: Chaerin
@@ -376,15 +649,19 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: NurseOffice1_1_0
     plots:
-    - sayContent: "They don\u2019t trust her."
+    - sayContent: "They don\u2019t trust me enough to risk letting me out with all
+        the zombies around me."
       fontStyle: 0
       changeBgName: NurseOffice_morn
       charactorName: 
       nameSetType: 0
-      leftCharactorName: unknown_extra
-      middleCharactorName: unknown_extra
-      rightCharactorName: unknown_extra
-      loadSayEvent: []
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieSound
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: "\u201CSorry, Chaerin!\u201D "
@@ -392,42 +669,57 @@ MonoBehaviour:
       changeBgName: NurseOffice_morn
       charactorName: Classmate
       nameSetType: -2
-      leftCharactorName: unknown_extra
-      middleCharactorName: unknown_extra
-      rightCharactorName: unknown_extra
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: The students sound guilty about leaving her behind.
+    - sayContent: "\u201CWe can't risk letting those zombies loose on the school.
+        I'm so sorry!\u201D "
+      fontStyle: 0
+      changeBgName: NurseOffice_morn
+      charactorName: Classmate
+      nameSetType: -2
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'At least they sound guilty about leaving me behind. '
       fontStyle: 0
       changeBgName: NurseOffice_morn
       charactorName: 
       nameSetType: 0
-      leftCharactorName: unknown_extra
-      middleCharactorName: unknown_extra
-      rightCharactorName: unknown_extra
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: They made the right choice to leave me behind even if I have to
-        do die.
+    - sayContent: As much as I hate to admit it, they made the right choice to not
+        let the zombies loose.
       fontStyle: 0
       changeBgName: NurseOffice_night
       charactorName: Chaerin
       nameSetType: -2
-      leftCharactorName: 
-      middleCharactorName: same_player
-      rightCharactorName: 
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
       loadSayEvent:
       - methodName: SetTime
         parameter: 86400
         parameterType: 1
+      - methodName: LoadMusic
+        parameter: ZombieBite
+        parameterType: 2
       jumpEndEvent:
       - methodName: AddTime
         parameter: 1800
         parameterType: 1
       touchNextEvent: []
-    - sayContent: 'Chaerin dies, classmates lock her in with infected students. '
+    - sayContent: I'm going to die thanks to my classmates locking me in.
       fontStyle: 0
       changeBgName: NurseOffice_night
       charactorName: Zombies
@@ -439,6 +731,9 @@ MonoBehaviour:
       - methodName: SetTime
         parameter: 86400
         parameterType: 1
+      - methodName: LoadMusic
+        parameter: ZombieBite2
+        parameterType: 2
       jumpEndEvent:
       - methodName: ResetGameToSchoolGate
         parameter: 
@@ -446,35 +741,40 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: NurseOffice1_2_0
     plots:
-    - sayContent: "\u201CIt\u2019s just Chaerin in there.\u201D"
+    - sayContent: "\u201CI feel kind of bad, but if we had to pick someone to leave
+        behind, at least it's just Chaerin in there.\u201D"
       fontStyle: 0
       changeBgName: NurseOffice_morn
       charactorName: Classmate
       nameSetType: 1
-      leftCharactorName: unknown_extra
-      middleCharactorName: unknown_extra
-      rightCharactorName: unknown_extra
-      loadSayEvent: []
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieSoundShort
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CYeah she\u2019s so mean anyways, who cares?\u201D"
+    - sayContent: "\u201CYeah she\u2019s so mean. No way she'd help us if it was
+        the other way around.\u201D"
       fontStyle: 0
       changeBgName: NurseOffice_morn
       charactorName: Classmate
       nameSetType: -1
-      leftCharactorName: unknown_extra
-      middleCharactorName: unknown_extra
-      rightCharactorName: unknown_extra
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
       loadSayEvent: []
       jumpEndEvent:
       - methodName: ChangeApathyNum
         parameter: 1
         parameterType: 1
       touchNextEvent: []
-    - sayContent: 'Chaerin dies, classmates lock her in with infected students. '
+    - sayContent: 'After that? I''m definitely not going to save them ever. '
       fontStyle: 0
       changeBgName: NurseOffice_night
-      charactorName: Zombies
+      charactorName: 
       nameSetType: -2
       leftCharactorName: zombie
       middleCharactorName: zombie
@@ -483,6 +783,26 @@ MonoBehaviour:
       - methodName: SetTime
         parameter: 86400
         parameterType: 1
+      jumpEndEvent:
+      - methodName: ResetGameToSchoolGate
+        parameter: 
+        parameterType: 0
+      touchNextEvent: []
+    - sayContent: Screw you guys!
+      fontStyle: 0
+      changeBgName: NurseOffice_night
+      charactorName: 
+      nameSetType: -2
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
+      loadSayEvent:
+      - methodName: SetTime
+        parameter: 86400
+        parameterType: 1
+      - methodName: LoadMusic
+        parameter: ZombieBite
+        parameterType: 2
       jumpEndEvent:
       - methodName: ResetGameToSchoolGate
         parameter: 
@@ -490,7 +810,18 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: NurseOffice1_3_0
     plots:
-    - sayContent: 'Chaerin dies, classmates lock her in with infected students. '
+    - sayContent: 'I have nothing to say to them. '
+      fontStyle: 0
+      changeBgName: NurseOffice_night
+      charactorName: 
+      nameSetType: -2
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: zombie
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: I'm going to die thanks to my classmates locking me in.
       fontStyle: 0
       changeBgName: NurseOffice_night
       charactorName: Zombies
@@ -506,11 +837,36 @@ MonoBehaviour:
       - methodName: ResetGameToSchoolGate
         parameter: 
         parameterType: 0
+      - methodName: ChangeApathyNum
+        parameter: 1
+        parameterType: 1
       touchNextEvent: []
   - plotName: Gmy1_0
     plots:
-    - sayContent: '"If I have any hope of survival, I should find a weapon before
-        noon."'
+    - sayContent: If I have any hope of survival, I should find a weapon before noon
+        or maybe I can talk to someone?
+      fontStyle: 0
+      changeBgName: GymClean
+      charactorName: Chaerin
+      nameSetType: -2
+      leftCharactorName: 
+      middleCharactorName: same_player
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: There's no gym class yet, so I'll have to come back.
+      fontStyle: 0
+      changeBgName: GymClean
+      charactorName: Chaerin
+      nameSetType: -2
+      leftCharactorName: 
+      middleCharactorName: same_player
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'Ugh! This was a waste of time. I''ll have to come back. '
       fontStyle: 0
       changeBgName: GymClean
       charactorName: Chaerin
@@ -526,7 +882,8 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: Choose_Gym0
     plots:
-    - sayContent: 'Should I look around or maybe talk to people for information? '
+    - sayContent: 'Oh good! There are people here now. Should I look around or maybe
+        talk to people for information? '
       fontStyle: 0
       changeBgName: GymClean
       charactorName: Chaerin
@@ -545,7 +902,8 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: Gmy2_1
     plots:
-    - sayContent: 'Se-eun Ham is in the library. '
+    - sayContent: '"Girl with a bracelet in class 2-3? You mean Se-Eun Ham? I''m
+        pretty sure she''s studying in the library right now." '
       fontStyle: 0
       changeBgName: GymClean
       charactorName: Classmate
@@ -555,19 +913,34 @@ MonoBehaviour:
       rightCharactorName: same_player
       loadSayEvent: []
       jumpEndEvent:
-      - methodName: SetCharatorToDic
-        parameter: Se-Eun_Ham_update1
-        parameterType: 2
-      - methodName: RemoveCharatorToDic
-        parameter: Se-Eun_Ham
-        parameterType: 2
-      - methodName: SetTip
-        parameter: "Se-Eun\u2019supdate"
-        parameterType: 2
-      touchNextEvent:
       - methodName: ChangeApathyNum
         parameter: -1
-        parameterType: 1
+        parameterType: 0
+      touchNextEvent: []
+    - sayContent: The library?! But it's blocked off by zombies! She's probably in
+        danger, and our classmates don't even realize it!
+      fontStyle: 0
+      changeBgName: GymClean
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: unknown_extra
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'Okay, I need to find something that can help Se-Eun. Where to
+        next? '
+      fontStyle: 0
+      changeBgName: GymClean
+      charactorName: 
+      nameSetType: -1
+      leftCharactorName: unknown_extra
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
   - plotName: Gmy2_1_1
     plots:
     - sayContent: Ask Se-eun about her bracelet.
@@ -579,11 +952,15 @@ MonoBehaviour:
       middleCharactorName: 
       rightCharactorName: same_player
       loadSayEvent: []
-      jumpEndEvent: []
+      jumpEndEvent:
+      - methodName: ChangeApathyNum
+        parameter: 1
+        parameterType: 1
       touchNextEvent: []
   - plotName: Gmy2_1_2
     plots:
-    - sayContent: "\u201CARGHHH\u201D"
+    - sayContent: All the students here turned into zombies! It's not safe to come
+        here anymore.
       fontStyle: 0
       changeBgName: zombiegym
       charactorName: Zombies
@@ -591,10 +968,30 @@ MonoBehaviour:
       leftCharactorName: zombie
       middleCharactorName: zombie
       rightCharactorName: same_player
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieSoundShort
+        parameterType: 2
+      jumpEndEvent:
+      - methodName: ChangeApathyNum
+        parameter: 1
+        parameterType: 1
+      touchNextEvent: []
+    - sayContent: "\u201CRRAARGHHH\u201D"
+      fontStyle: 0
+      changeBgName: zombiegym
+      charactorName: Zombies
+      nameSetType: -1
+      leftCharactorName: zombie
+      middleCharactorName: zombie
+      rightCharactorName: same_player
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieBite2
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CAHHH!\u201D"
+    - sayContent: 'Time to try again, I guess. '
       fontStyle: 0
       changeBgName: zombiegym
       charactorName: Chaerin
@@ -610,7 +1007,8 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: MusicRoom0
     plots:
-    - sayContent: 'Chaerin goes to the music room. '
+    - sayContent: There's nowhere else for me to go today. I know the music room
+        isn't safe but..
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: 
@@ -618,10 +1016,14 @@ MonoBehaviour:
       leftCharactorName: 
       middleCharactorName: 
       rightCharactorName: 
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieSound
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: This is it! Our first kiss!
+    - sayContent: Once the clock hits noon, every location leads to death. Figured
+        I might as well see Jeha before this day restarts again.
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: Chaerin
@@ -643,7 +1045,7 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: The room is empty. You feel arms around wrap around you.
+    - sayContent: I've died so much it doesn't even hurt anymore..
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: 
@@ -654,7 +1056,19 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CJeha! I read your no \u2013\u201D"
+    - sayContent: Even as a zombie, he's still the only face I can recognize.
+      fontStyle: 0
+      changeBgName: MusicRoom
+      charactorName: 
+      nameSetType: 0
+      leftCharactorName: 
+      middleCharactorName: same_player
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'I''ll try to find that girl with the bracelet again when the day
+        restarts. But in the meantime... '
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: Chaerin
@@ -662,10 +1076,13 @@ MonoBehaviour:
       leftCharactorName: Jeha_transition
       middleCharactorName: 
       rightCharactorName: same_player
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieBite
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CARGHHH\u201D"
+    - sayContent: '"RRAARGH!"'
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: Jeha
@@ -673,10 +1090,13 @@ MonoBehaviour:
       leftCharactorName: Jeha_zombie
       middleCharactorName: 
       rightCharactorName: same_player
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieBite2
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CAHHH!\u201D"
+    - sayContent: '"Ow! Jeha, you don''t have to bite so hard!"'
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: Chaerin
@@ -689,7 +1109,13 @@ MonoBehaviour:
       - methodName: ResetGameToSchoolGate
         parameter: 
         parameterType: 0
-      touchNextEvent: []
+      - methodName: ChangeApathyNum
+        parameter: 1
+        parameterType: 1
+      touchNextEvent:
+      - methodName: ChangeApathyNum
+        parameter: 
+        parameterType: 0
   - plotName: Classroom1_0
     plots:
     - sayContent: "\u201CI know that girl who saved me is in my class!\u201D"

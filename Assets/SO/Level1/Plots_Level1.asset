@@ -15,8 +15,7 @@ MonoBehaviour:
   plotMessages:
   - plotName: BedRoom_1
     plots:
-    - sayContent: "It\u2019s time for school! Today is the day Jeha confesses to
-        me in the music room!"
+    - sayContent: Oh! Is it today?! It's today!
       fontStyle: 0
       changeBgName: BedRoom
       charactorName: Chaerin
@@ -27,7 +26,8 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: I better look my best!
+    - sayContent: 'My name is Chaerin Eun and one day I woke up as the female lead
+        of a romance novel. '
       fontStyle: 0
       changeBgName: BedRoom
       charactorName: Chaerin
@@ -38,7 +38,54 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "Let\u2019s start with my flowing pink hair."
+    - sayContent: 'I don''t know why, but I''m not complaining. As Chaerin, I have
+        long and flowing pink hair and perfect skin. A perfect love interest.  '
+      fontStyle: 0
+      changeBgName: BedRoom
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: Today is the day that Jeha, the male lead, confesses to Chaerin
+        aka ME!
+      fontStyle: 0
+      changeBgName: BedRoom
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'Which means, I definitely have to look my best for Jeha. '
+      fontStyle: 0
+      changeBgName: BedRoom
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'Every choice counts today! Including how I look.  '
+      fontStyle: 1
+      changeBgName: BedRoom
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: "Let\u2019s start with my flowing pink hair and then pick some
+        clothes. I just have to remember: Every choice counts."
       fontStyle: 0
       changeBgName: BedRoom
       charactorName: Chaerin
@@ -60,8 +107,8 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: BedRoom_1_0
     plots:
-    - sayContent: Perfect! I look exactly like a lead love interest. Now to pick
-        out my clothes.
+    - sayContent: 'Long, flowing pink locks of hair. I look like I could be the female
+        lead of a WEBTOON! Guess I should pick out my clothes next. '
       fontStyle: 0
       changeBgName: BedRoom
       charactorName: Chaerin
@@ -69,7 +116,10 @@ MonoBehaviour:
       leftCharactorName: 
       middleCharactorName: same_player
       rightCharactorName: 
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: GetReadyHair
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent:
       - methodName: LoadNextSay
@@ -77,10 +127,9 @@ MonoBehaviour:
         parameterType: 2
   - plotName: BedRoom_1_1
     plots:
-    - sayContent: "Hmm.. I don\u2019t care much for this. My hair is long and pink
-        in this story, shouldn\u2019t I show it off for Jeha? But I guess as the
-        female lead, he won\u2019t care. He is going to confess to me no matter what.
-        Now to pick out my clothes."
+    - sayContent: "My hair is long and pink in this story, shouldn\u2019t I show
+        it off? Too late to change now and as the female lead, Jeha is going to confess
+        to me no matter what. Now to pick out my clothes."
       fontStyle: 0
       changeBgName: BedRoom
       charactorName: Chaerin
@@ -112,8 +161,8 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: BedRoom_2_0
     plots:
-    - sayContent: "Perfect, it\u2019s unbuttoned to look cuter and I lifted the skirt
-        higher. Jeha will love this."
+    - sayContent: 'My uniform is perfect. I just have to unbotton the blazer and
+        if I adjust the skirt just like.. that! Jeha will love it. '
       fontStyle: 0
       changeBgName: BedRoom
       charactorName: Chaerin
@@ -191,8 +240,31 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: '"Careful, Chaerin! You have to be more careful, what if you got
-        hurt?"'
+    - sayContent: Did I call it or what? I know this romance story inside and out!
+      fontStyle: 0
+      changeBgName: BusStop
+      charactorName: 
+      nameSetType: 0
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: 'Okay.. Play it cool, act like you don''t know anything. Jeha looks
+        worried. '
+      fontStyle: 0
+      changeBgName: BusStop
+      charactorName: 
+      nameSetType: 0
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: '"Chaerin! You have to be more careful, what if you got hurt? I''d
+        never forgive myself."'
       fontStyle: 0
       changeBgName: BusStop
       charactorName: Jeha
@@ -209,7 +281,7 @@ MonoBehaviour:
         parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\rJeha looks at you with concern."
+    - sayContent: 'Poor Jeha looks so worried, but this is all part of the story. '
       fontStyle: 0
       changeBgName: BusStop
       charactorName: 
@@ -220,7 +292,7 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\"I\u2019m okay, thanks for saving me, Jeha.\""
+    - sayContent: '"Thanks for saving me, Jeha. That was a close call."'
       fontStyle: 0
       changeBgName: BusStop
       charactorName: Chaerin
@@ -243,7 +315,7 @@ MonoBehaviour:
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: "This is all going according to the book. Now he\u2019s going to
-        ask to meet in the music room where we get our first kiss. "
+        give me a note asking me to meet him in the music room at noon."
       fontStyle: 0
       changeBgName: BusStop
       charactorName: Chaerin
@@ -254,7 +326,19 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: Jeha blushes and hands you a note.
+    - sayContent: Once I go to the music room, Jeha and I will have our first kiss
+        and we'll officially be a couple!
+      fontStyle: 0
+      changeBgName: BusStop
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: Jeha_default
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: Jeha blushes and just as predicted, hands me a note.
       fontStyle: 0
       changeBgName: BusStop
       charactorName: 
@@ -271,7 +355,7 @@ MonoBehaviour:
         parameter: update2
         parameterType: 2
       touchNextEvent: []
-    - sayContent: '"Read it as soon as you get to class."'
+    - sayContent: '"Please read it as soon as you get to class."'
       fontStyle: 0
       changeBgName: BusStop
       charactorName: Jeha
@@ -282,7 +366,26 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: Classmates whisper...
+    - sayContent: 'Jeha walks away as I put the note in blue bag. I should check
+        my pink phone while I''m at it. '
+      fontStyle: 0
+      changeBgName: BusStop
+      charactorName: 
+      nameSetType: 0
+      leftCharactorName: Jeha_default
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent:
+      - methodName: SetPropToBag
+        parameter: first_note
+        parameterType: 2
+      - methodName: SetTip
+        parameter: update2
+        parameterType: 2
+      touchNextEvent: []
+    - sayContent: 'The students of room 2-3 gossip among themselves. A few of them
+        send glares my way. '
       fontStyle: 0
       changeBgName: ClassRoom_morn
       charactorName: 
@@ -290,11 +393,14 @@ MonoBehaviour:
       leftCharactorName: unknown_extra
       middleCharactorName: unknown_extra
       rightCharactorName: unknown_extra
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ClassmatesTalkingShort
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "As the main character, you can only see classmates as shadow figures
-        unlike Jeha. They don\u2019t like Chaerin."
+    - sayContent: 'As the main character, all these people are extras in the novel
+        so they appear as shadow figures. Only Jeha looks real to me. '
       fontStyle: 0
       changeBgName: ClassRoom_morn
       charactorName: 
@@ -305,14 +411,15 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "But then again, they don\u2019t matter, only Jeha does. "
+    - sayContent: 'I haven''t even bothered to learn their names. They don''t matter.
+        They''re just extras. '
       fontStyle: 0
       changeBgName: ClassRoom_morn
       charactorName: 
       nameSetType: 0
-      leftCharactorName: Jeha_default
-      middleCharactorName: 
-      rightCharactorName: same_player
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -340,10 +447,24 @@ MonoBehaviour:
       leftCharactorName: unknown_extra
       middleCharactorName: unknown_extra
       rightCharactorName: unknown_extra
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ClassmatesTalkingShort
+        parameterType: 2
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: "\u201CAll Chaerin does is sit there. She only cares about Jeha.\u201D"
+      fontStyle: 0
+      changeBgName: ClassRoom_morn
+      charactorName: Classmate
+      nameSetType: 1
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CChaerin only cares about Jeha.\u201D"
+    - sayContent: '"Are you surprised? She''s always been this way."'
       fontStyle: 0
       changeBgName: ClassRoom_morn
       charactorName: Classmate
@@ -369,6 +490,40 @@ MonoBehaviour:
       - methodName: LoadNextSay
         parameter: MusicRoom_0
         parameterType: 2
+    - sayContent: Um.. Excuse me? I'm right here.
+      fontStyle: 0
+      changeBgName: ClassRoom_morn
+      charactorName: 
+      nameSetType: 1
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: Whatever, they're just background characters. Who cares what they
+        think?
+      fontStyle: 0
+      changeBgName: ClassRoom_morn
+      charactorName: 
+      nameSetType: 1
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: Jeha is the only one that matters.
+      fontStyle: 0
+      changeBgName: ClassRoom_morn
+      charactorName: 
+      nameSetType: 1
+      leftCharactorName: unknown_extra
+      middleCharactorName: unknown_extra
+      rightCharactorName: unknown_extra
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
     - sayContent: Time passes to noon.
       fontStyle: 0
       changeBgName: ClassRoom_morn
@@ -488,7 +643,8 @@ MonoBehaviour:
         parameterType: 2
   - plotName: MusicRoom_0
     plots:
-    - sayContent: Chaerin goes to the music room.
+    - sayContent: 'It''s noon which means I have to go see Jeha just like in the
+        novel. '
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: 
@@ -496,17 +652,6 @@ MonoBehaviour:
       leftCharactorName: 
       middleCharactorName: 
       rightCharactorName: 
-      loadSayEvent: []
-      jumpEndEvent: []
-      touchNextEvent: []
-    - sayContent: This is it! Our first kiss!
-      fontStyle: 0
-      changeBgName: MusicRoom
-      charactorName: Chaerin
-      nameSetType: 1
-      leftCharactorName: 
-      middleCharactorName: 
-      rightCharactorName: same_player
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
@@ -521,7 +666,7 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: The room is empty. You feel arms around wrap around you.
+    - sayContent: The room is empty. When suddenly cold arms wrap around me.
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: 
@@ -529,10 +674,24 @@ MonoBehaviour:
       leftCharactorName: Jeha_transition
       middleCharactorName: 
       rightCharactorName: same_player
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieSoundShort
+        parameterType: 2
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: It's him!
+      fontStyle: 0
+      changeBgName: MusicRoom
+      charactorName: 
+      nameSetType: 1
+      leftCharactorName: Jeha_transition
+      middleCharactorName: 
+      rightCharactorName: same_player
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CJeha! I read your no--\u201D"
+    - sayContent: "\u201CJeha! I came to find --\u201D"
       fontStyle: 0
       changeBgName: MusicRoom
       charactorName: Chaerin
@@ -540,7 +699,10 @@ MonoBehaviour:
       leftCharactorName: Jeha_transition
       middleCharactorName: 
       rightCharactorName: same_player
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieBite
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: "\u201CARGHHH\u201D"
@@ -551,7 +713,10 @@ MonoBehaviour:
       leftCharactorName: Jeha_zombie
       middleCharactorName: 
       rightCharactorName: same_player
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: Zombie
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: "\u201CAHHH!\u201D"
@@ -562,7 +727,10 @@ MonoBehaviour:
       leftCharactorName: Jeha_zombie
       middleCharactorName: 
       rightCharactorName: same_player
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieBite3
+        parameterType: 2
       jumpEndEvent:
       - methodName: GameOver
         parameter: 

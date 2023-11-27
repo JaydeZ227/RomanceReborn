@@ -365,7 +365,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Se-Eun\u2019s profile updates."
+  m_Text: 'Se-Eun Ham wears a bracelet. She''s also a notorious hoarder and is in
+    the library.  '
 --- !u!222 &104636735
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2450,7 +2451,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2461,7 +2462,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Mihui Yang\u2019s profile updates."
+  m_Text: Mihui Yang wears a bracelet. She loves to livestream from her phone and
+    is buying lunch at the shop on 3F
 --- !u!222 &525938145
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3575,6 +3577,134 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &920339770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920339772}
+  - component: {fileID: 920339771}
+  m_Layer: 0
+  m_Name: AudioController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &920339771
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920339770}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b54e0abb076319c4cbe66e6269ce6a84, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &920339772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920339770}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.0193572, y: -1.3286783, z: 396.32077}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &953824951
 GameObject:
   m_ObjectHideFlags: 0
@@ -3937,7 +4067,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Rina\u2019s profile updates."
+  m_Text: 'Rina Song is a tall and tough classmate. She intimidates everyone and
+    is hard to get close to. '
 --- !u!222 &1017874810
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6022,7 +6153,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Mihui Yang\u2019s profile updates."
+  m_Text: 'Mihui Yang is on the third floor shop getting lunch. '
 --- !u!222 &1786169267
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6968,7 +7099,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Mihui Yang\u2019s profile updates."
+  m_Text: Mihui Yang is the girl who gave me the kimbap and saved me that day!
 --- !u!222 &2092321757
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7029,6 +7160,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2575834095690354527, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -853
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575834095690354527, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -449
+      objectReference: {fileID: 0}
     - target: {fileID: 4130979707049917723, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
       propertyPath: useAction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -7041,6 +7180,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1710869213}
+    - target: {fileID: 7018374494242977988, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1478.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7018374494242977988, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 11.23
+      objectReference: {fileID: 0}
     - target: {fileID: 7666051196170271055, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
       propertyPath: jehaStrList.Array.size
       value: 3
@@ -7078,6 +7225,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 199289442}
     m_Modifications:
+    - target: {fileID: 500201057461487897, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: Mihui Yang is definitely the girl with the bracelet in my bag!
+      objectReference: {fileID: 0}
     - target: {fileID: 812720247144398112, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7102,6 +7253,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1083956237544741430, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: Se-Eun Ham has a bracelet. But where is she?
+      objectReference: {fileID: 0}
     - target: {fileID: 2008926334690176797, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7149,6 +7304,10 @@ PrefabInstance:
     - target: {fileID: 2023230682762530730, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110207758347594918, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: 'Se-Eun has bracelet. She is in the library blocked by zombies. '
       objectReference: {fileID: 0}
     - target: {fileID: 3162520730988661312, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7334,6 +7493,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: NomalUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5688891112433750688, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: 'Mihui Yang wears a bracelet. She''s getting lunch at the 3rd Floor
+        Shop. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5725659844422150271, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: Mihui Yang wears a bracelet. But where is she?
+      objectReference: {fileID: 0}
     - target: {fileID: 5739151345779956577, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7405,6 +7573,10 @@ PrefabInstance:
     - target: {fileID: 7270422793720677947, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011354677656906446, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: 'Se-Eun has bracelet. She is in the Library that''s blocked by zombies. '
       objectReference: {fileID: 0}
     - target: {fileID: 8284448655740936970, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7520,3 +7692,4 @@ SceneRoots:
   - {fileID: 6691168477081493560}
   - {fileID: 1398934588}
   - {fileID: 1470953478}
+  - {fileID: 920339772}
