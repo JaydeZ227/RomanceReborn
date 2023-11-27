@@ -262,21 +262,49 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5340014189840836618, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8402
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340014189840836618, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8402
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340014189840836618, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8402
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340014189840836618, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340014189840836618, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6444356757480660346, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6972209561456460020, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8
+      value: 0.9588
       objectReference: {fileID: 0}
     - target: {fileID: 6972209561456460020, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8
+      value: 0.92488
       objectReference: {fileID: 0}
     - target: {fileID: 6972209561456460020, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6972209561456460020, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.9785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6972209561456460020, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.0661
       objectReference: {fileID: 0}
     - target: {fileID: 7509653594912766381, guid: 278c2db1554b7fd4e940e3b0e2e1e037, type: 3}
       propertyPath: m_IsActive
@@ -7172,14 +7200,62 @@ PrefabInstance:
       propertyPath: useAction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1502380343}
+    - target: {fileID: 4629051954555490650, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1388.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629051954555490650, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1438.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629051954555490650, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629051954555490650, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 91.26495
+      objectReference: {fileID: 0}
     - target: {fileID: 4958397921712187243, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
       propertyPath: m_Name
       value: PlotSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030742184912015918, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1360.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030742184912015918, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1427.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030742184912015918, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -547
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030742184912015918, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 122.28
       objectReference: {fileID: 0}
     - target: {fileID: 5631031195469163772, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1710869213}
+    - target: {fileID: 5783445935198674065, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1380.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783445935198674065, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1398.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783445935198674065, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 468
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783445935198674065, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 71
+      objectReference: {fileID: 0}
     - target: {fileID: 7018374494242977988, guid: 51dce164aa88a794db874fc49803b70b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1478.14
@@ -7309,6 +7385,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Se-Eun has bracelet. She is in the library blocked by zombies. '
       objectReference: {fileID: 0}
+    - target: {fileID: 2234156374215554024, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: 'A list of symptoms and infected students from the Nurse''s office. '
+      objectReference: {fileID: 0}
     - target: {fileID: 3162520730988661312, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -7401,6 +7481,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4093547290428251358, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: 'A rubber chicken..? I don''t even know what to do with this but the
+        owner might have an idea. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636082518492694604, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: I'm going to need someone tougher than me to use this. But it'll definitely
+        clear out somem zombies.
+      objectReference: {fileID: 0}
     - target: {fileID: 4644841561773324745, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7456,6 +7546,16 @@ PrefabInstance:
     - target: {fileID: 4701953080058980304, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030708206613951719, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: Meet Me in the Music Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077044373523732508, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: 'The bracelet from that mystery girl who saved my life
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 5119491252219565958, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7541,6 +7641,10 @@ PrefabInstance:
     - target: {fileID: 6796303485365755403, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138426976717575889, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
+      propertyPath: m_Text
+      value: "Maybe I can use this to help someone if they get hurt. \n"
       objectReference: {fileID: 0}
     - target: {fileID: 7250360152898781438, guid: b87cb16a7262f5b4cb563a419311f4a3, type: 3}
       propertyPath: m_AnchorMax.y

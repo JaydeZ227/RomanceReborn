@@ -176,7 +176,7 @@ MonoBehaviour:
   - chooseName: Library0
     choose:
       chooseItem:
-      - name: "Ask if she\u2019s okay (Apathy -1)"
+      - name: "Ask if she\u2019s okay"
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
@@ -186,7 +186,7 @@ MonoBehaviour:
         - methodName: LoadNextSay
           parameter: Library1_0
           parameterType: 2
-      - name: Ask about her bracelet (Apathy +1)
+      - name: 'Ask about her bracelet '
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
@@ -216,6 +216,16 @@ MonoBehaviour:
           parameterType: 1
         - methodName: LoadNextSay
           parameter: Library2_0_0
+          parameterType: 2
+      - name: Use the Rubber Chicken
+        chooseUpdateProp: 
+        chooseUpdateTip: 
+        chooseTargetEvent:
+        - methodName: ChangeApathyNum
+          parameter: -2
+          parameterType: 1
+        - methodName: LoadNextSay
+          parameter: Library2_1
           parameterType: 2
       endAction: 
   - chooseName: Library1_State2

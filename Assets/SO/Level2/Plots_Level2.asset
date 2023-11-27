@@ -943,7 +943,8 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: Gmy2_1_1
     plots:
-    - sayContent: Ask Se-eun about her bracelet.
+    - sayContent: '"Se-Eun''s bracelet? I mean, I guess it looks pretty average.
+        Why do you care all of a sudden?"'
       fontStyle: 0
       changeBgName: GymClean
       charactorName: Chaerin
@@ -1132,6 +1133,18 @@ MonoBehaviour:
         parameter: -2
         parameterType: 1
       touchNextEvent: []
+    - sayContent: 'But there''s a class happening right now. I won''t be able to
+        talk to anyone. I''ll have to leave and come back. '
+      fontStyle: 0
+      changeBgName: ClassRoom_after
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: Rina
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
   - plotName: Classroom1_1
     plots:
     - sayContent: 
@@ -1248,7 +1261,8 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: Classroom2_1
     plots:
-    - sayContent: Time passes to noon.
+    - sayContent: Someone in the class got infected. The whole classroom is filled
+        with zombies!
       fontStyle: 0
       changeBgName: ClassRoom_after
       charactorName: 
@@ -1259,7 +1273,8 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CARGHHH\u201D"
+    - sayContent: Someone in the class got infected. The whole classroom is filled
+        with zombies
       fontStyle: 0
       changeBgName: ClassRoom_after
       charactorName: Zombies
@@ -1273,7 +1288,7 @@ MonoBehaviour:
         parameterType: 1
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CAHHH!\u201D"
+    - sayContent: '"... Here we go again." '
       fontStyle: 0
       changeBgName: ClassRoom_after
       charactorName: Chaerin
@@ -1289,6 +1304,9 @@ MonoBehaviour:
       - methodName: ResetGameToSchoolGate
         parameter: 
         parameterType: 0
+      - methodName: ChangeApathyNum
+        parameter: 1
+        parameterType: 1
       touchNextEvent: []
   - plotName: Classroom2_2
     plots:
@@ -1312,7 +1330,8 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: Classroom2_3
     plots:
-    - sayContent: Time passes to noon.
+    - sayContent: Someone in the class got infected. The whole classroom is filled
+        with zombies.
       fontStyle: 0
       changeBgName: ClassRoom_after
       charactorName: 
@@ -1320,7 +1339,10 @@ MonoBehaviour:
       leftCharactorName: 
       middleCharactorName: 
       rightCharactorName: 
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadMusic
+        parameter: ZombieSoundShort
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
     - sayContent: "\u201CARGHHH\u201D"
@@ -1337,13 +1359,13 @@ MonoBehaviour:
         parameterType: 1
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CAHHH!\u201D"
+    - sayContent: '"... This sucks. I''m so tired of being bitten." '
       fontStyle: 0
-      changeBgName: ClassRoom_night
+      changeBgName: ClassRoom_after
       charactorName: Chaerin
       nameSetType: 1
-      leftCharactorName: unknown_extra
-      middleCharactorName: unknown_extra
+      leftCharactorName: zombie
+      middleCharactorName: zombie
       rightCharactorName: same_player
       loadSayEvent:
       - methodName: SetTime
@@ -1352,6 +1374,9 @@ MonoBehaviour:
       jumpEndEvent:
       - methodName: ResetGameToSchoolGate
         parameter: 
+        parameterType: 0
+      - methodName: ChangeApathyNum
+        parameter: 1
         parameterType: 0
       touchNextEvent: []
   - plotName: Classroom3_0
@@ -1367,8 +1392,8 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "Rina doesn\u2019t like Chaerin and doesn\u2019t seem happy to
-        be speaking with her. "
+    - sayContent: "Rina definitely doesn't lie me and doesn\u2019t seem happy to
+        be speaking with me. I have to get her to trust me."
       fontStyle: 0
       changeBgName: ClassRoom_morn
       charactorName: 
@@ -1379,7 +1404,7 @@ MonoBehaviour:
       loadSayEvent: []
       jumpEndEvent: []
       touchNextEvent: []
-    - sayContent: "\u201CI found this bat. I need your help, Rina.\u201D"
+    - sayContent: "\u201CI found this bat in the gym. I really need your help, Rina.\u201D"
       fontStyle: 0
       changeBgName: ClassRoom_morn
       charactorName: Chaerin
@@ -1460,7 +1485,7 @@ MonoBehaviour:
       touchNextEvent: []
   - plotName: Classroom3_1
     plots:
-    - sayContent: 'I hold the bat out to Rina and Rina grabs it firmly. '
+    - sayContent: 'I hold the bat out to Rina and she grabs it firmly. '
       fontStyle: 0
       changeBgName: ClassRoom_morn
       charactorName: 
@@ -1867,7 +1892,10 @@ MonoBehaviour:
       leftCharactorName: 
       middleCharactorName: 
       rightCharactorName: 
-      loadSayEvent: []
+      loadSayEvent:
+      - methodName: LoadNextSay
+        parameter: Shop2ndFloor0
+        parameterType: 2
       jumpEndEvent: []
       touchNextEvent: []
   - plotName: Shop2ndFloor0
