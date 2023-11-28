@@ -233,7 +233,7 @@ public class PlotController : MonoBehaviour
             }
             else if (jehaStrList.Contains(plots[plotIndex].rightCharactorName))
             {
-                GameController2.Instance.leftPlayer.SetState(GameController2.Instance.GetJehaNameByApathyNum(plots[plotIndex].rightCharactorName));
+                GameController2.Instance.rightPlayer.SetState(GameController2.Instance.GetJehaNameByApathyNum(plots[plotIndex].rightCharactorName));
             }
             else if (plots[plotIndex].rightCharactorName == GameController2.Instance.player_zombie)
             {
@@ -254,7 +254,7 @@ public class PlotController : MonoBehaviour
             }
             else if (jehaStrList.Contains(plots[plotIndex].middleCharactorName))
             {
-                GameController2.Instance.leftPlayer.SetState(GameController2.Instance.GetJehaNameByApathyNum(plots[plotIndex].middleCharactorName));
+                GameController2.Instance.middlePlayer.SetState(GameController2.Instance.GetJehaNameByApathyNum(plots[plotIndex].middleCharactorName));
             }
             else
             {

@@ -117,9 +117,29 @@ public class GameController2 : MonoBehaviour
     {
         get
         {
-            return bagItemNameList.Contains("bat");
+            return bagItemNameList.Contains("bat")&& bagItemNameList.Contains("chicken");
         }
     }
+    public bool isLockLibaray_chickenChoose
+    {
+        get
+        {
+            return bagItemNameList.Contains("chicken");
+        }
+    }
+    public string hasChickenChoose = "Library2";
+    public void ChickenNext_Library()
+    {
+        if (isLockLibaray_chickenChoose)
+        {
+            PlotController.Instance.SetSay(gameControllerSimpleEvent.plotSO.GetPlot(hasChickenChoose).plots);
+        }
+        else
+        {
+
+        }
+    }
+
     public bool isLockLibaray = true;
     public void UnLockLibaray()
     {
@@ -139,7 +159,7 @@ public class GameController2 : MonoBehaviour
         {
             case "NurseOffice":
                 {
-                    if (curTime<=21*60*60)
+                    if (curTime<=9*60*60)
                     {
                         isCanEnter = true;
                     }
@@ -147,7 +167,7 @@ public class GameController2 : MonoBehaviour
                 break;
             case "Gym":
                 {
-                    if (curTime <= 22 * 60 * 60)
+                    if (curTime <= 10 * 60 * 60)
                     {
                         isCanEnter = true;
                     }
@@ -163,7 +183,7 @@ public class GameController2 : MonoBehaviour
                 {
                     if (classEnterCount == 0)
                     {
-                        if (curTime <= 19 * 60 * 60)
+                        if (curTime <= 7 * 60 * 60)
                         {
                             isCanEnter = true;
                         }
@@ -172,7 +192,10 @@ public class GameController2 : MonoBehaviour
                     {
                         if (!isLockClass2)
                         {
-                            isCanEnter = true;
+                            if (curTime <= 7 * 60 * 60)
+                            {
+                                isCanEnter = true;
+                            }
 
                         }
                         else 
@@ -356,10 +379,12 @@ public class GameController2 : MonoBehaviour
             item.SetActive(false);
         }
         PlotController.Instance.say.gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
+        
+        yield return new WaitForSeconds(1f);
         AddTime(30 * 60);
         // PlotController.Instance.say.gameObject.SetActive(true);
         PlotController.Instance.SetSay(PlotSO.GetPlot(bsNextSay).plots);
+
         DieToBus();
     }
     public bool isDieToBus = false;
@@ -383,13 +408,13 @@ public class GameController2 : MonoBehaviour
         leftPlayer.SetState(bedendCharactorAllName);
         middlePlayer.SetState(bedendCharactorAllName);
         rightPlayer.SetState(bedendCharactorAllName);
-        SetTime(60*60*24-30*60);
+        SetTime(60*60*12-30*60);
         foreach (var item in PlotController.Instance.chooseHide)
         {
             item.SetActive(false);
         }
         PlotController.Instance.say.gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
         // PlotController.Instance.say.gameObject.SetActive(true);
         PlotController.Instance.SetSay(PlotSO.GetPlot(bedendNextSay).plots);
         //DieToBus();
@@ -609,6 +634,9 @@ public class GameController2 : MonoBehaviour
         resetButton.SetActive(true);
     }
     #endregion
+    #region SchoolGate
+    public string schoolgate = "SchoolGateJeha";
+    #endregion
     GameStateEnum _gameState = GameStateEnum.StartBedRoom;
     public string player_zombie = "player_zombie";
     public string GetPlayerZombie()
@@ -663,16 +691,19 @@ public class GameController2 : MonoBehaviour
                         Debug.Log("SchoolGate");
                         CloseSayBar();
                         bgIcon.SetState(SchoolGate_morn_BgStr);
-                        leftPlayer.SetState("");
-                        middlePlayer.SetState(GetJehaNameByApathyNum("Jeha_default"));
-                        rightPlayer.SetState("");
-                        PlotController.Instance.say.gameObject.SetActive(false);
+                       // leftPlayer.SetState("");
+                       // middlePlayer.SetState(GetJehaNameByApathyNum("Jeha_default"));
+                        //rightPlayer.SetState("");
+                       // PlotController.Instance.say.gameObject.SetActive(false);
                         ApathyShow.SetActive(true);
                         if (curApathyNum>=12)
                         {
                             LoadSceneByMap("OverScene");
                         }
-
+                        else
+                        {
+                            PlotController.Instance.SetSay(PlotSO.GetPlot(schoolgate).plots);
+                        }
                     }
                     break;
                 case GameStateEnum.MusicRoom:
@@ -787,7 +818,7 @@ public class GameController2 : MonoBehaviour
         charactorNameList.Add(s);
         Debug.Log("add to charactor dic:" + s);
     }
-    public void RemoveCharactorToDic(string s)
+    public void RemoveCharatorToDic(string s)
     {
         if (!charactorNameList.Contains(s))
         {
@@ -888,4 +919,10 @@ public class GameController2 : MonoBehaviour
         mapButton.isCanTouch = true;
     }
 
+    //win
+    public GameObject WinPage;
+    public void GameWin()
+    {
+        WinPage.SetActive(true);
+    }
 }

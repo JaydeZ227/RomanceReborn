@@ -15,7 +15,11 @@ E:/NYU/2023/Webtoon/RomanceReborn/RomanceReborn
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< Updated upstream
 56737
+=======
+63449
+>>>>>>> Stashed changes
 Successfully changed project path to: E:/NYU/2023/Webtoon/RomanceReborn/RomanceReborn
 E:/NYU/2023/Webtoon/RomanceReborn/RomanceReborn
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +53,21 @@ E:/NYU/2023/Webtoon/RomanceReborn/RomanceReborn
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< Updated upstream
 Player connection [18588] Host "[IP] 192.168.50.23 [Port] 0 [Flags] 2 [Guid] 2517852738 [EditorId] 2517852738 [Version] 1048832 [Id] WindowsEditor(7,JoJoZ_Alien) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
 Player connection [18588] Host "[IP] 192.168.50.23 [Port] 0 [Flags] 2 [Guid] 2517852738 [EditorId] 2517852738 [Version] 1048832 [Id] WindowsEditor(7,JoJoZ_Alien) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 31 workers.
 Refreshing native plugins compatible for Editor in 4.87 ms, found 4 plugins.
+=======
+Player connection [23224] Host "[IP] 10.18.204.165 [Port] 0 [Flags] 2 [Guid] 1476236540 [EditorId] 1476236540 [Version] 1048832 [Id] WindowsEditor(7,JoJoZ_Alien) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [23224] Host "[IP] 10.18.204.165 [Port] 0 [Flags] 2 [Guid] 1476236540 [EditorId] 1476236540 [Version] 1048832 [Id] WindowsEditor(7,JoJoZ_Alien) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 31 workers.
+Refreshing native plugins compatible for Editor in 3934.00 ms, found 4 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.10f1 (ff3792e53c62)
 [Subsystems] Discovering subsystems at path E:/UnityPj/2022.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -70,7 +83,11 @@ Initialize mono
 Mono path[0] = 'E:/UnityPj/2022.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'E:/UnityPj/2022.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/UnityPj/2022.3.10f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56748
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56880
+>>>>>>> Stashed changes
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/UnityPj/2022.3.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -81,8 +98,13 @@ Register platform support module: E:/UnityPj/2022.3.10f1/Editor/Data/PlaybackEng
 Register platform support module: E:/UnityPj/2022.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: E:/UnityPj/2022.3.10f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: E:/UnityPj/2022.3.10f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+<<<<<<< Updated upstream
 Registered in 0.004651 seconds.
 - Loaded All Assemblies, in  0.223 seconds
+=======
+Registered in 1.844079 seconds.
+- Loaded All Assemblies, in 16.611 seconds
+>>>>>>> Stashed changes
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
@@ -93,6 +115,7 @@ Native extension for AppleTV target not found
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
+<<<<<<< Updated upstream
 Android Extension - Scanning For ADB Devices 213 ms
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
@@ -100,11 +123,21 @@ Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.446 seconds
 Domain Reload Profiling: 669ms
 	BeginReloadAssembly (70ms)
+=======
+Android Extension - Scanning For ADB Devices 665 ms
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.369 seconds
+Domain Reload Profiling: 18980ms
+	BeginReloadAssembly (10535ms)
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
 	RebuildCommonClasses (20ms)
 	RebuildNativeTypeToScriptingClass (7ms)
 	initialDomainReloadingComplete (35ms)
@@ -127,6 +160,30 @@ Domain Reload Profiling: 669ms
 			BeforeProcessingInitializeOnLoad (1ms)
 			ProcessInitializeOnLoadAttributes (57ms)
 			ProcessInitializeOnLoadMethodAttributes (32ms)
+=======
+	RebuildCommonClasses (851ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (1898ms)
+	LoadAllAssembliesAndSetupDomain (3318ms)
+		LoadAssemblies (10536ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (3314ms)
+			TypeCache.Refresh (3311ms)
+				TypeCache.ScanAssembly (2697ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (2369ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2290ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2087ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (116ms)
+			ProcessInitializeOnLoadMethodAttributes (80ms)
+>>>>>>> Stashed changes
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -134,8 +191,13 @@ Domain Reload Profiling: 669ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
+<<<<<<< Updated upstream
 - Loaded All Assemblies, in  0.389 seconds
 Refreshing native plugins compatible for Editor in 1.46 ms, found 4 plugins.
+=======
+- Loaded All Assemblies, in 14.510 seconds
+Refreshing native plugins compatible for Editor in 2.05 ms, found 4 plugins.
+>>>>>>> Stashed changes
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
@@ -149,6 +211,7 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  0.394 seconds
 Domain Reload Profiling: 782ms
 	BeginReloadAssembly (91ms)
@@ -1188,6 +1251,50 @@ Memory consumption went from 140.8 MB to 140.7 MB.
 Total: 2.568300 ms (FindLiveObjects: 0.176700 ms CreateObjectMapping: 0.060400 ms MarkObjects: 2.278000 ms  DeleteObjects: 0.052400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+=======
+- Finished resetting the current domain, in  0.587 seconds
+Domain Reload Profiling: 15097ms
+	BeginReloadAssembly (130ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (14308ms)
+		LoadAssemblies (13523ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (863ms)
+			TypeCache.Refresh (835ms)
+				TypeCache.ScanAssembly (723ms)
+			ScanForSourceGeneratedMonoScriptInfo (22ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (587ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (428ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (34ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (60ms)
+			ProcessInitializeOnLoadAttributes (295ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 2.41 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4047 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (60.5 KB). Loaded Objects now: 4513.
+Memory consumption went from 144.3 MB to 144.2 MB.
+Total: 3.356200 ms (FindLiveObjects: 0.221200 ms CreateObjectMapping: 0.106000 ms MarkObjects: 2.923100 ms  DeleteObjects: 0.105200 ms)
+
+>>>>>>> Stashed changes
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
@@ -1204,6 +1311,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
   Time since last request: 1947.592788 seconds.
   path: Assets/SO/Level2/Plots_Level2.asset
   artifactKey: Guid(c97fdf25ad333a84da4a7c61ad74bf58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -1234,3 +1342,35 @@ Received Import Request.
 Start importing Assets/SO/Level2/Plots_Level2.asset using Guid(c97fdf25ad333a84da4a7c61ad74bf58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '615f4ee4c1ee0d6e47e3622bb9ea276c') in 0.002902 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
+=======
+  Time since last request: 413596.001471 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_CrazyStage_3.png
+  artifactKey: Guid(d1025bee84ed71448905990958b6dd7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_CrazyStage_3.png using Guid(d1025bee84ed71448905990958b6dd7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef5c07bc75ad28a8ce17ee5b2b0be494') in 0.134570 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.329987 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_CrazyPonytailJogging.png
+  artifactKey: Guid(8a4e3be44b3208e41b227d3143e50dd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_CrazyPonytailJogging.png using Guid(8a4e3be44b3208e41b227d3143e50dd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e508cbf0d16d13c5991c13cbd6633a09') in 0.033172 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 6.067767 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_hairDown_uniform.png
+  artifactKey: Guid(49db848df46788848a2242fe41c6c697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_hairDown_uniform.png using Guid(49db848df46788848a2242fe41c6c697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06421438ffd7d710909c404b765a2d5f') in 0.027853 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.844954 seconds.
+  path: Assets/Resources/Character/Chaerin/Chaerin_hairDown_gym.png
+  artifactKey: Guid(33763b65790cccd4ca01aa8a7fae1874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Character/Chaerin/Chaerin_hairDown_gym.png using Guid(33763b65790cccd4ca01aa8a7fae1874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df3d1ce9ddc8c10d9d779e7c2c8c75db') in 0.059916 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+>>>>>>> Stashed changes

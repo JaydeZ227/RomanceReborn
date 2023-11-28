@@ -559,7 +559,89 @@ MonoBehaviour:
       rightCharactorName: same_player
       loadSayEvent: []
       jumpEndEvent:
-      - methodName: GameOver
+      - methodName: ShowBlood1
+        parameter: 
+        parameterType: 0
+      touchNextEvent: []
+  - plotName: bbbbb
+    plots:
+    - sayContent: Chaerin goes to the music room.
+      fontStyle: 0
+      changeBgName: MusicRoom
+      charactorName: 
+      nameSetType: 0
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: 
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: This is it! Our first kiss!
+      fontStyle: 0
+      changeBgName: MusicRoom
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: "\u201CJeha?\u201D"
+      fontStyle: 0
+      changeBgName: MusicRoom
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: 
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: The room is empty. You feel arms around wrap around you.
+      fontStyle: 0
+      changeBgName: MusicRoom
+      charactorName: 
+      nameSetType: 0
+      leftCharactorName: Jeha_transition
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: "\u201CJeha! I read your no--\u201D"
+      fontStyle: 0
+      changeBgName: MusicRoom
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: Jeha_transition
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: "\u201CARGHHH\u201D"
+      fontStyle: 0
+      changeBgName: MusicRoom
+      charactorName: Jeha
+      nameSetType: -1
+      leftCharactorName: Jeha_zombie
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent: []
+      touchNextEvent: []
+    - sayContent: "\u201CAHHH!\u201D"
+      fontStyle: 0
+      changeBgName: MusicRoom
+      charactorName: Chaerin
+      nameSetType: 1
+      leftCharactorName: Jeha_zombie
+      middleCharactorName: 
+      rightCharactorName: same_player
+      loadSayEvent: []
+      jumpEndEvent:
+      - methodName: ShowBlood2
         parameter: 
         parameterType: 0
       touchNextEvent: []

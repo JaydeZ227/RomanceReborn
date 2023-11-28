@@ -128,9 +128,15 @@ Transform:
   m_GameObject: {fileID: 1803766791708100580}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -3.1, y: -3.5, z: 0}
   m_LocalScale: {x: 2.396274, y: 2.396274, z: 2.396274}
   m_ConstrainProportionsScale: 0
+=======
+  m_LocalPosition: {x: -1.9, y: -6.5, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 94549577505625888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -219,7 +225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8571778733127093354
 Transform:
   m_ObjectHideFlags: 0
@@ -436,8 +442,6 @@ Transform:
   m_Children:
   - {fileID: 9070434900334230082}
   - {fileID: 5340014189840836618}
-  - {fileID: 4445595650073806171}
-  - {fileID: 2889233482714506721}
   - {fileID: 8571778733127093354}
   - {fileID: 2727850186992475517}
   - {fileID: 2706171715087917849}
@@ -475,10 +479,6 @@ MonoBehaviour:
   states:
   - stateName: zombie
     stateShow: {fileID: 7723890841619110594}
-  - stateName: Chaerin_hairUp
-    stateShow: {fileID: 6062054880403400713}
-  - stateName: Chaerin_hairDown
-    stateShow: {fileID: 4434773928181625561}
   - stateName: Chaerin_hairUp_gym
     stateShow: {fileID: 5731542477388699873}
   - stateName: Chaerin_hairUp_uniform
@@ -952,7 +952,7 @@ Transform:
   m_GameObject: {fileID: 4668709529662806922}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.8, y: -5, z: 0}
+  m_LocalPosition: {x: -13.79, y: -5.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1733,6 +1733,7 @@ MonoBehaviour:
   isCloseHide: 1
   showAlphaSpeed: 2
   hideAlphaSpeed: 2
+<<<<<<< Updated upstream
 --- !u!1 &6444356757480660346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,6 +1835,8 @@ MonoBehaviour:
   isCloseHide: 1
   showAlphaSpeed: 2
   hideAlphaSpeed: 2
+=======
+>>>>>>> Stashed changes
 --- !u!1 &7509653594912766381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,7 +1864,7 @@ Transform:
   m_GameObject: {fileID: 7509653594912766381}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.7, y: -5.1, z: 0}
+  m_LocalPosition: {x: -13.7, y: -4.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2036,6 +2039,7 @@ MonoBehaviour:
   isCloseHide: 1
   showAlphaSpeed: 2
   hideAlphaSpeed: 2
+<<<<<<< Updated upstream
 --- !u!1 &8023452777342542229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,6 +2141,8 @@ MonoBehaviour:
   isCloseHide: 1
   showAlphaSpeed: 2
   hideAlphaSpeed: 2
+=======
+>>>>>>> Stashed changes
 --- !u!1 &8231355086559249060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,7 +2271,7 @@ Transform:
   m_GameObject: {fileID: 8445530872602724248}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.4, y: -5.1, z: 0}
+  m_LocalPosition: {x: -13.4, y: -5.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2366,7 +2372,11 @@ Transform:
   m_GameObject: {fileID: 8915045736651274531}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 1.9, y: -8, z: 0}
+=======
+  m_LocalPosition: {x: 1.4, y: -10.8, z: 0}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 2.396274, y: 2.396274, z: 2.396274}
   m_ConstrainProportionsScale: 1
   m_Children: []

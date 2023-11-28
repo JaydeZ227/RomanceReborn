@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Resources/BGImage/Library.png.meta
 guid: f3215f0f8cc3bc44eb2b149bd0f2a046
+========
+guid: 204d5a18ee8892f44afca819db49f92f
+>>>>>>>> Stashed changes:Assets/Resources/BGImage/screen/timerbox.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

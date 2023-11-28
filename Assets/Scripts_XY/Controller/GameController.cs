@@ -155,11 +155,16 @@ public class GameController : MonoBehaviour
         charactorNameList.Add(s);
         Debug.Log("add to charactor dic:" + s);
     }
-    public ToBlackPage bloodShow;
+    public ToBlackPage bloodShow_1;
+    public ToBlackPage bloodShow_2;
     public float endBloodTime = 2;
-    public void GameOver()
+    public void ShowBlood1()
     {
-        bloodShow.SetBackground(endBloodTime);
+        bloodShow_1.SetBackground(endBloodTime);
+    }
+    public void ShowBlood2()
+    {
+        bloodShow_2.SetBackground(endBloodTime);
     }
     public void BackMenu()
     {
