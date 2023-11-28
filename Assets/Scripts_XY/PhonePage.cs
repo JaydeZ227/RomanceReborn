@@ -28,7 +28,8 @@ public class PhonePage : MonoBehaviour
     {
         isOpen = true;
         gameObject.SetActive(true);
-
+        bagButton.SetActive(false);
+        iphoneButton.SetActive(false);
         page1.SetActive(true);
         page_Map.SetActive(false);
         page_Charactor.SetActive(false);

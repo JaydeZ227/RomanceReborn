@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 8977353092565425809}
   - component: {fileID: 1998846956028734096}
   m_Layer: 5
-  m_Name: NurseOffice_night
+  m_Name: NurseOffice_after
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0aa927c2124e9d84aa3325ad274a55dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3794027f96b40c44db91276b7dfa5736, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9d58e6c2b5f36bc4f9ec1f8f139eb602, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3215f0f8cc3bc44eb2b149bd0f2a046, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2317,7 +2317,7 @@ MonoBehaviour:
     stateShow: {fileID: 8462261288588222871}
   - stateName: NurseOffice_morn
     stateShow: {fileID: 1454376927436755097}
-  - stateName: NurseOffice_night
+  - stateName: NurseOffice_after
     stateShow: {fileID: 8977353092565425809}
   - stateName: BedRoom
     stateShow: {fileID: 1802083005445175883}

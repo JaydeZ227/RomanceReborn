@@ -155,7 +155,7 @@ MonoBehaviour:
         chooseTargetEvent:
         - methodName: AddTime
           parameter: 3600
-          parameterType: 0
+          parameterType: 1
         - methodName: SetTip
           parameter: bat
           parameterType: 2
@@ -168,7 +168,7 @@ MonoBehaviour:
         chooseTargetEvent:
         - methodName: AddTime
           parameter: 3600
-          parameterType: 0
+          parameterType: 1
         - methodName: LoadNextSay
           parameter: Gmy2_1
           parameterType: 2
@@ -176,7 +176,7 @@ MonoBehaviour:
   - chooseName: Library0
     choose:
       chooseItem:
-      - name: "Ask if she\u2019s okay (Apathy -1)"
+      - name: "Ask if she\u2019s okay"
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
@@ -186,7 +186,7 @@ MonoBehaviour:
         - methodName: LoadNextSay
           parameter: Library1_0
           parameterType: 2
-      - name: Ask about her bracelet (Apathy +1)
+      - name: Ask about her bracelet
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
@@ -207,7 +207,7 @@ MonoBehaviour:
   - chooseName: Library1_State1
     choose:
       chooseItem:
-      - name: Send Rina to clear the zombies (Apathy +2)
+      - name: Send Rina to clear the zombies
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
@@ -221,7 +221,7 @@ MonoBehaviour:
   - chooseName: Library1_State2
     choose:
       chooseItem:
-      - name: Send Rina to clear the zombies (Apathy +2)
+      - name: Send Rina to clear the zombies
         chooseUpdateProp: 
         chooseUpdateTip: 
         chooseTargetEvent:
